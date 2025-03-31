@@ -1,0 +1,2858 @@
+{
+  "B1": {
+    "value": "Badrumsrenovering",
+    "formula": null
+  },
+  "B2": {
+    "value": "Personuppgifter",
+    "formula": null
+  },
+  "D2": {
+    "value": "Förnamn",
+    "formula": null
+  },
+  "F2": {
+    "value": "Efternamn",
+    "formula": null
+  },
+  "K2": {
+    "value": "Arbetskostnad",
+    "formula": null
+  },
+  "L2": {
+    "value": "Materialkostnad",
+    "formula": null
+  },
+  "M2": {
+    "value": "Servicebil, trängselskatt, parkering, byggsäck",
+    "formula": null
+  },
+  "A3": {
+    "value": "O",
+    "formula": null
+  },
+  "B3": {
+    "value": "Personens namn",
+    "formula": null
+  },
+  "A4": {
+    "value": "O",
+    "formula": null
+  },
+  "B4": {
+    "value": "Telefonnummer",
+    "formula": null
+  },
+  "D4": {
+    "value": "Tel.",
+    "formula": null
+  },
+  "A5": {
+    "value": "O",
+    "formula": null
+  },
+  "B5": {
+    "value": "Adress fullständig",
+    "formula": null
+  },
+  "D5": {
+    "value": "Adress",
+    "formula": null
+  },
+  "B6": {
+    "value": "Epost",
+    "formula": null
+  },
+  "D6": {
+    "value": "Epost",
+    "formula": null
+  },
+  "A7": {
+    "value": "EVB",
+    "formula": null
+  },
+  "B7": {
+    "value": "Portkod",
+    "formula": null
+  },
+  "D7": {
+    "value": "Portkod",
+    "formula": null
+  },
+  "B8": {
+    "value": "Utförande säsong",
+    "formula": null
+  },
+  "D8": {
+    "value": "Sommar",
+    "formula": null
+  },
+  "F8": {
+    "value": "Vinter",
+    "formula": null
+  },
+  "K8": {
+    "value": "=IF(T8,0)+ IF(U8,3000)",
+    "formula": "=IF(T8,0)+ IF(U8,3000)"
+  },
+  "O8": {
+    "value": "=IF(IF(T8,0)+IF(U8,3000)+IF(V8,6000)+IF(W8,8000)>0,ROW(), \"\")",
+    "formula": "=IF(IF(T8,0)+IF(U8,3000)+IF(V8,6000)+IF(W8,8000)>0,ROW(), \"\")"
+  },
+  "T8": {
+    "value": "False",
+    "formula": null
+  },
+  "U8": {
+    "value": "False",
+    "formula": null
+  },
+  "O9": {
+    "value": "=IF(IF(T9,0)+IF(U9,3000)+IF(V9,6000)+IF(W9,8000)>0,ROW(), \"\")",
+    "formula": "=IF(IF(T9,0)+IF(U9,3000)+IF(V9,6000)+IF(W9,8000)>0,ROW(), \"\")"
+  },
+  "B10": {
+    "value": "Antal våningar",
+    "formula": null
+  },
+  "D10": {
+    "value": "Antal",
+    "formula": null
+  },
+  "J10": {
+    "value": "100",
+    "formula": null
+  },
+  "K10": {
+    "value": "=F10*J10",
+    "formula": "=F10*J10"
+  },
+  "O10": {
+    "value": "=IF(IF(T10,0)+IF(U10,3000)+IF(V10,6000)+IF(W10,8000)>0,ROW(), \"\")",
+    "formula": "=IF(IF(T10,0)+IF(U10,3000)+IF(V10,6000)+IF(W10,8000)>0,ROW(), \"\")"
+  },
+  "B11": {
+    "value": "Boende, (lägenhet eller hus)",
+    "formula": null
+  },
+  "D11": {
+    "value": "Brf Lägenhet",
+    "formula": null
+  },
+  "F11": {
+    "value": "Hus",
+    "formula": null
+  },
+  "H11": {
+    "value": "Fritidshus",
+    "formula": null
+  },
+  "J11": {
+    "value": "Hyresrätt/lokal",
+    "formula": null
+  },
+  "K11": {
+    "value": "=IF(T11,2000)+ IF(U11,0)+ IF(V11,0)+ IF(W11,2000)",
+    "formula": "=IF(T11,2000)+ IF(U11,0)+ IF(V11,0)+ IF(W11,2000)"
+  },
+  "O11": {
+    "value": "=IF(IF(T11,0)+IF(U11,3000)+IF(V11,6000)+IF(W11,8000)>0,ROW(), \"\")",
+    "formula": "=IF(IF(T11,0)+IF(U11,3000)+IF(V11,6000)+IF(W11,8000)>0,ROW(), \"\")"
+  },
+  "T11": {
+    "value": "False",
+    "formula": null
+  },
+  "U11": {
+    "value": "False",
+    "formula": null
+  },
+  "V11": {
+    "value": "False",
+    "formula": null
+  },
+  "W11": {
+    "value": "False",
+    "formula": null
+  },
+  "B12": {
+    "value": "Parkeringsmöjlighet(avstånd till fastighet)",
+    "formula": null
+  },
+  "D12": {
+    "value": "Dålig",
+    "formula": null
+  },
+  "F12": {
+    "value": "Helt okej",
+    "formula": null
+  },
+  "H12": {
+    "value": "Bra",
+    "formula": null
+  },
+  "K12": {
+    "value": "=IF(V12,1000)+ IF(W12,0)+ IF(X12,0)",
+    "formula": "=IF(V12,1000)+ IF(W12,0)+ IF(X12,0)"
+  },
+  "O12": {
+    "value": "=IF(IF(T12,0)+IF(U12,3000)+IF(V12,6000)+IF(W12,8000)>0,ROW(), \"\")",
+    "formula": "=IF(IF(T12,0)+IF(U12,3000)+IF(V12,6000)+IF(W12,8000)>0,ROW(), \"\")"
+  },
+  "T12": {
+    "value": "False",
+    "formula": null
+  },
+  "U12": {
+    "value": "False",
+    "formula": null
+  },
+  "V12": {
+    "value": "False",
+    "formula": null
+  },
+  "B13": {
+    "value": "Transportmöjlighet fram till fastigheten",
+    "formula": null
+  },
+  "D13": {
+    "value": "Dålig",
+    "formula": null
+  },
+  "F13": {
+    "value": "Helt okej",
+    "formula": null
+  },
+  "H13": {
+    "value": "Bra",
+    "formula": null
+  },
+  "K13": {
+    "value": "=IF(T13,2000)+ IF(U13,500)+ IF(V13,0)",
+    "formula": "=IF(T13,2000)+ IF(U13,500)+ IF(V13,0)"
+  },
+  "O13": {
+    "value": "=IF(IF(T13,0)+IF(U13,3000)+IF(V13,6000)+IF(W13,8000)>0,ROW(), \"\")",
+    "formula": "=IF(IF(T13,0)+IF(U13,3000)+IF(V13,6000)+IF(W13,8000)>0,ROW(), \"\")"
+  },
+  "T13": {
+    "value": "False",
+    "formula": null
+  },
+  "U13": {
+    "value": "False",
+    "formula": null
+  },
+  "V13": {
+    "value": "False",
+    "formula": null
+  },
+  "B14": {
+    "value": "Parkeringskostnad",
+    "formula": null
+  },
+  "D14": {
+    "value": "Antal dagar",
+    "formula": null
+  },
+  "H14": {
+    "value": "Kostnad per dag",
+    "formula": null
+  },
+  "M14": {
+    "value": "=F14*J14",
+    "formula": "=F14*J14"
+  },
+  "O14": {
+    "value": "=IF(IF(T14,0)+IF(U14,3000)+IF(V14,6000)+IF(W14,8000)>0,ROW(), \"\")",
+    "formula": "=IF(IF(T14,0)+IF(U14,3000)+IF(V14,6000)+IF(W14,8000)>0,ROW(), \"\")"
+  },
+  "B15": {
+    "value": "Service bil",
+    "formula": null
+  },
+  "D15": {
+    "value": "Antal dagar",
+    "formula": null
+  },
+  "H15": {
+    "value": "Kostnad per dag",
+    "formula": null
+  },
+  "M15": {
+    "value": "=F15*J15",
+    "formula": "=F15*J15"
+  },
+  "O15": {
+    "value": "=IF(IF(T15,0)+IF(U15,3000)+IF(V15,6000)+IF(W15,8000)>0,ROW(), \"\")",
+    "formula": "=IF(IF(T15,0)+IF(U15,3000)+IF(V15,6000)+IF(W15,8000)>0,ROW(), \"\")"
+  },
+  "B16": {
+    "value": "Trängselskatt",
+    "formula": null
+  },
+  "D16": {
+    "value": "Antal dagar",
+    "formula": null
+  },
+  "H16": {
+    "value": "Kostnad per dag",
+    "formula": null
+  },
+  "M16": {
+    "value": "=F16*J16",
+    "formula": "=F16*J16"
+  },
+  "O16": {
+    "value": "=IF(IF(T16,0)+IF(U16,3000)+IF(V16,6000)+IF(W16,8000)>0,ROW(), \"\")",
+    "formula": "=IF(IF(T16,0)+IF(U16,3000)+IF(V16,6000)+IF(W16,8000)>0,ROW(), \"\")"
+  },
+  "B17": {
+    "value": "Hiss Ja eller Nej",
+    "formula": null
+  },
+  "D17": {
+    "value": "Ja",
+    "formula": null
+  },
+  "F17": {
+    "value": "Nej",
+    "formula": null
+  },
+  "H17": {
+    "value": "Behövs inte ",
+    "formula": null
+  },
+  "K17": {
+    "value": "=IF(T17,0)+ IF(U17,2000)+ IF(V17,0)",
+    "formula": "=IF(T17,0)+ IF(U17,2000)+ IF(V17,0)"
+  },
+  "O17": {
+    "value": "=IF(IF(T17,0)+IF(U17,3000)+IF(V17,6000)+IF(W17,8000)>0,ROW(), \"\")",
+    "formula": "=IF(IF(T17,0)+IF(U17,3000)+IF(V17,6000)+IF(W17,8000)>0,ROW(), \"\")"
+  },
+  "T17": {
+    "value": "False",
+    "formula": null
+  },
+  "U17": {
+    "value": "False",
+    "formula": null
+  },
+  "V17": {
+    "value": "False",
+    "formula": null
+  },
+  "B18": {
+    "value": "Storlek på hiss",
+    "formula": null
+  },
+  "D18": {
+    "value": "Liten",
+    "formula": null
+  },
+  "F18": {
+    "value": "Mellan",
+    "formula": null
+  },
+  "H18": {
+    "value": "Stor",
+    "formula": null
+  },
+  "K18": {
+    "value": "=IF(T18,2000)+ IF(U18,500)+ IF(V18,F215)",
+    "formula": "=IF(T18,2000)+ IF(U18,500)+ IF(V18,F215)"
+  },
+  "O18": {
+    "value": "=IF(IF(T18,0)+IF(U18,3000)+IF(V18,6000)+IF(W18,8000)>0,ROW(), \"\")",
+    "formula": "=IF(IF(T18,0)+IF(U18,3000)+IF(V18,6000)+IF(W18,8000)>0,ROW(), \"\")"
+  },
+  "T18": {
+    "value": "False",
+    "formula": null
+  },
+  "U18": {
+    "value": "False",
+    "formula": null
+  },
+  "V18": {
+    "value": "False",
+    "formula": null
+  },
+  "B19": {
+    "value": "Trapphus med god tillgänglighet",
+    "formula": null
+  },
+  "D19": {
+    "value": "Ja",
+    "formula": null
+  },
+  "F19": {
+    "value": "Nej",
+    "formula": null
+  },
+  "H19": {
+    "value": "Behövs inte ",
+    "formula": null
+  },
+  "K19": {
+    "value": "=IF(T19,0)+ IF(U19,2000)+ IF(V19,0)",
+    "formula": "=IF(T19,0)+ IF(U19,2000)+ IF(V19,0)"
+  },
+  "O19": {
+    "value": "=IF(IF(T19,0)+IF(U19,3000)+IF(V19,6000)+IF(W19,8000)>0,ROW(), \"\")",
+    "formula": "=IF(IF(T19,0)+IF(U19,3000)+IF(V19,6000)+IF(W19,8000)>0,ROW(), \"\")"
+  },
+  "T19": {
+    "value": "False",
+    "formula": null
+  },
+  "U19": {
+    "value": "False",
+    "formula": null
+  },
+  "V19": {
+    "value": "False",
+    "formula": null
+  },
+  "B20": {
+    "value": "Möjlighet till arbetsutrymme inomhus",
+    "formula": null
+  },
+  "D20": {
+    "value": "Finns",
+    "formula": null
+  },
+  "F20": {
+    "value": "Finns inte",
+    "formula": null
+  },
+  "K20": {
+    "value": "=IF(T20,0)+ IF(U20,2000)",
+    "formula": "=IF(T20,0)+ IF(U20,2000)"
+  },
+  "O20": {
+    "value": "=IF(IF(T20,0)+IF(U20,3000)+IF(V20,6000)+IF(W20,8000)>0,ROW(), \"\")",
+    "formula": "=IF(IF(T20,0)+IF(U20,3000)+IF(V20,6000)+IF(W20,8000)>0,ROW(), \"\")"
+  },
+  "T20": {
+    "value": "False",
+    "formula": null
+  },
+  "U20": {
+    "value": "False",
+    "formula": null
+  },
+  "B21": {
+    "value": "Distans till närmaste arbetsutrymme om nej",
+    "formula": null
+  },
+  "D21": {
+    "value": "Antal meter",
+    "formula": null
+  },
+  "H21": {
+    "value": "Pris/m",
+    "formula": null
+  },
+  "J21": {
+    "value": "480",
+    "formula": null
+  },
+  "K21": {
+    "value": "=F21*J21",
+    "formula": "=F21*J21"
+  },
+  "O21": {
+    "value": "=IF(IF(T21,0)+IF(U21,3000)+IF(V21,6000)+IF(W21,8000)>0,ROW(), \"\")",
+    "formula": "=IF(IF(T21,0)+IF(U21,3000)+IF(V21,6000)+IF(W21,8000)>0,ROW(), \"\")"
+  },
+  "B22": {
+    "value": "Avstånd till arbetsutrymme från närmaste ingång",
+    "formula": null
+  },
+  "D22": {
+    "value": "Antal meter",
+    "formula": null
+  },
+  "H22": {
+    "value": "Pris/m",
+    "formula": null
+  },
+  "J22": {
+    "value": "480",
+    "formula": null
+  },
+  "K22": {
+    "value": "=F22*J22",
+    "formula": "=F22*J22"
+  },
+  "A23": {
+    "value": "O",
+    "formula": null
+  },
+  "B23": {
+    "value": "Täcking av golv",
+    "formula": null
+  },
+  "D23": {
+    "value": "Timmar",
+    "formula": null
+  },
+  "H23": {
+    "value": "Golvyta (kvm)",
+    "formula": null
+  },
+  "K23": {
+    "value": "=F23*T23",
+    "formula": "=F23*T23"
+  },
+  "L23": {
+    "value": "=J23*U23",
+    "formula": "=J23*U23"
+  },
+  "T23": {
+    "value": "680",
+    "formula": null
+  },
+  "U23": {
+    "value": "50",
+    "formula": null
+  },
+  "B24": {
+    "value": "Angående bostad och kund",
+    "formula": null
+  },
+  "A25": {
+    "value": "EVB",
+    "formula": null
+  },
+  "B25": {
+    "value": "Mått på badrumet.   BxLxH",
+    "formula": null
+  },
+  "D25": {
+    "value": "200",
+    "formula": null
+  },
+  "F25": {
+    "value": "300",
+    "formula": null
+  },
+  "H25": {
+    "value": "250",
+    "formula": null
+  },
+  "K25": {
+    "value": "=40000+(D25*160)+(F25*160)+(H25*160)",
+    "formula": "=40000+(D25*160)+(F25*160)+(H25*160)"
+  },
+  "L25": {
+    "value": "=20000+(D715)+(F715)+(H25*10)",
+    "formula": "=20000+(D715)+(F715)+(H25*10)"
+  },
+  "A26": {
+    "value": "EVB",
+    "formula": null
+  },
+  "B26": {
+    "value": "Golvyta",
+    "formula": null
+  },
+  "D26": {
+    "value": "=SUM(D25*F25*0.0001)",
+    "formula": "=SUM(D25*F25*0.0001)"
+  },
+  "B27": {
+    "value": "Skiss på badrummet ",
+    "formula": null
+  },
+  "D27": {
+    "value": "Finns",
+    "formula": null
+  },
+  "F27": {
+    "value": "Tagit fram av oss",
+    "formula": null
+  },
+  "K27": {
+    "value": "=IF(T27,O73)+ IF(U27,0)",
+    "formula": "=IF(T27,O73)+ IF(U27,0)"
+  },
+  "T27": {
+    "value": "False",
+    "formula": null
+  },
+  "U27": {
+    "value": "False",
+    "formula": null
+  },
+  "B28": {
+    "value": "Befintliga placeringar ",
+    "formula": null
+  },
+  "D28": {
+    "value": "Ritat",
+    "formula": null
+  },
+  "K28": {
+    "value": "=IF(T28,0,0)",
+    "formula": "=IF(T28,0,0)"
+  },
+  "T28": {
+    "value": "False",
+    "formula": null
+  },
+  "A29": {
+    "value": "EVB",
+    "formula": null
+  },
+  "B29": {
+    "value": "Antal omplaceringar ",
+    "formula": null
+  },
+  "D29": {
+    "value": "0",
+    "formula": null
+  },
+  "F29": {
+    "value": "1",
+    "formula": null
+  },
+  "H29": {
+    "value": "2",
+    "formula": null
+  },
+  "J29": {
+    "value": "3",
+    "formula": null
+  },
+  "K29": {
+    "value": "=IF(T29,0)+ IF(U29,3000)+ IF(V29,6000)+ IF(W29,8000)",
+    "formula": "=IF(T29,0)+ IF(U29,3000)+ IF(V29,6000)+ IF(W29,8000)"
+  },
+  "L29": {
+    "value": "=IF(T29,0)+ IF(U29,500)+ IF(V29,1000)+ IF(W29,1500)",
+    "formula": "=IF(T29,0)+ IF(U29,500)+ IF(V29,1000)+ IF(W29,1500)"
+  },
+  "O29": {
+    "value": "=IF(IF(T33,0)+IF(U33,3000)+IF(V33,6000)+IF(W33,8000)>0,ROW(), \"\")",
+    "formula": "=IF(IF(T33,0)+IF(U33,3000)+IF(V33,6000)+IF(W33,8000)>0,ROW(), \"\")"
+  },
+  "T29": {
+    "value": "False",
+    "formula": null
+  },
+  "U29": {
+    "value": "False",
+    "formula": null
+  },
+  "V29": {
+    "value": "False",
+    "formula": null
+  },
+  "W29": {
+    "value": "False",
+    "formula": null
+  },
+  "A30": {
+    "value": "O",
+    "formula": null
+  },
+  "B30": {
+    "value": "Etablering",
+    "formula": null
+  },
+  "D30": {
+    "value": "Ja",
+    "formula": null
+  },
+  "F30": {
+    "value": "Nej",
+    "formula": null
+  },
+  "A31": {
+    "value": "OB",
+    "formula": null
+  },
+  "B31": {
+    "value": "Flytspackling",
+    "formula": null
+  },
+  "D31": {
+    "value": "Ja",
+    "formula": null
+  },
+  "F31": {
+    "value": "Nej",
+    "formula": null
+  },
+  "A32": {
+    "value": "OB",
+    "formula": null
+  },
+  "B32": {
+    "value": " Ta in byggmaterial",
+    "formula": null
+  },
+  "D32": {
+    "value": "Ja",
+    "formula": null
+  },
+  "F32": {
+    "value": "Nej",
+    "formula": null
+  },
+  "A33": {
+    "value": "OVB",
+    "formula": null
+  },
+  "B33": {
+    "value": "Omplacering av toalett (ange antal cm)",
+    "formula": null
+  },
+  "D33": {
+    "value": "Ja",
+    "formula": null
+  },
+  "F33": {
+    "value": "Nej",
+    "formula": null
+  },
+  "K33": {
+    "value": "=IF(T33,1000)+ IF(U33,0)",
+    "formula": "=IF(T33,1000)+ IF(U33,0)"
+  },
+  "L33": {
+    "value": "=IF(T33,500)+ IF(U33,0)",
+    "formula": "=IF(T33,500)+ IF(U33,0)"
+  },
+  "T33": {
+    "value": "False",
+    "formula": null
+  },
+  "U33": {
+    "value": "False",
+    "formula": null
+  },
+  "A34": {
+    "value": "OVB",
+    "formula": null
+  },
+  "B34": {
+    "value": "Omplacering av tvättställ (ange antal cm)",
+    "formula": null
+  },
+  "D34": {
+    "value": "Ja",
+    "formula": null
+  },
+  "F34": {
+    "value": "Nej",
+    "formula": null
+  },
+  "K34": {
+    "value": "=IF(T34,1000)+ IF(U34,0)",
+    "formula": "=IF(T34,1000)+ IF(U34,0)"
+  },
+  "L34": {
+    "value": "=IF(T34,500)+ IF(U34,0)",
+    "formula": "=IF(T34,500)+ IF(U34,0)"
+  },
+  "O34": {
+    "value": "=IF(IF(T34,0)+IF(U34,3000)+IF(V34,6000)+IF(W34,8000)>0,ROW(), \"\")",
+    "formula": "=IF(IF(T34,0)+IF(U34,3000)+IF(V34,6000)+IF(W34,8000)>0,ROW(), \"\")"
+  },
+  "T34": {
+    "value": "False",
+    "formula": null
+  },
+  "U34": {
+    "value": "False",
+    "formula": null
+  },
+  "A35": {
+    "value": "OVB",
+    "formula": null
+  },
+  "B35": {
+    "value": "Omplacering av dusch (ange antal cm)",
+    "formula": null
+  },
+  "D35": {
+    "value": "Ja",
+    "formula": null
+  },
+  "F35": {
+    "value": "Nej",
+    "formula": null
+  },
+  "K35": {
+    "value": "=IF(T35,1000)+ IF(U35,0)",
+    "formula": "=IF(T35,1000)+ IF(U35,0)"
+  },
+  "L35": {
+    "value": "=IF(T35,500)+ IF(U35,0)",
+    "formula": "=IF(T35,500)+ IF(U35,0)"
+  },
+  "O35": {
+    "value": "=IF(IF(T35,0)+IF(U35,3000)+IF(V35,6000)+IF(W35,8000)>0,ROW(), \"\")",
+    "formula": "=IF(IF(T35,0)+IF(U35,3000)+IF(V35,6000)+IF(W35,8000)>0,ROW(), \"\")"
+  },
+  "T35": {
+    "value": "False",
+    "formula": null
+  },
+  "U35": {
+    "value": "False",
+    "formula": null
+  },
+  "A36": {
+    "value": "OVB",
+    "formula": null
+  },
+  "B36": {
+    "value": "Omplacering av badkar (ange antal cm)",
+    "formula": null
+  },
+  "D36": {
+    "value": "Ja",
+    "formula": null
+  },
+  "F36": {
+    "value": "Nej",
+    "formula": null
+  },
+  "K36": {
+    "value": "=IF(T36,1000)+ IF(U36,0)",
+    "formula": "=IF(T36,1000)+ IF(U36,0)"
+  },
+  "L36": {
+    "value": "=IF(T36,1000)+ IF(U36,0)",
+    "formula": "=IF(T36,1000)+ IF(U36,0)"
+  },
+  "O36": {
+    "value": "=IF(IF(T36,0)+IF(U36,3000)+IF(V36,6000)+IF(W36,8000)>0,ROW(), \"\")",
+    "formula": "=IF(IF(T36,0)+IF(U36,3000)+IF(V36,6000)+IF(W36,8000)>0,ROW(), \"\")"
+  },
+  "T36": {
+    "value": "False",
+    "formula": null
+  },
+  "U36": {
+    "value": "False",
+    "formula": null
+  },
+  "A37": {
+    "value": "OVB",
+    "formula": null
+  },
+  "B37": {
+    "value": "Omplacering av handdukstork(ange antal cm)",
+    "formula": null
+  },
+  "D37": {
+    "value": "Ja",
+    "formula": null
+  },
+  "F37": {
+    "value": "Nej",
+    "formula": null
+  },
+  "K37": {
+    "value": "=IF(T37,1000)+ IF(U37,0)",
+    "formula": "=IF(T37,1000)+ IF(U37,0)"
+  },
+  "L37": {
+    "value": "=IF(T37,400)+ IF(U37,0)",
+    "formula": "=IF(T37,400)+ IF(U37,0)"
+  },
+  "O37": {
+    "value": "=IF(IF(T37,0)+IF(U37,3000)+IF(V37,6000)+IF(W37,8000)>0,ROW(), \"\")",
+    "formula": "=IF(IF(T37,0)+IF(U37,3000)+IF(V37,6000)+IF(W37,8000)>0,ROW(), \"\")"
+  },
+  "T37": {
+    "value": "False",
+    "formula": null
+  },
+  "U37": {
+    "value": "False",
+    "formula": null
+  },
+  "A38": {
+    "value": "OVB",
+    "formula": null
+  },
+  "B38": {
+    "value": "Antal byte av golvbrunnar",
+    "formula": null
+  },
+  "D38": {
+    "value": "1",
+    "formula": null
+  },
+  "F38": {
+    "value": "2",
+    "formula": null
+  },
+  "H38": {
+    "value": "3",
+    "formula": null
+  },
+  "J38": {
+    "value": " ",
+    "formula": null
+  },
+  "K38": {
+    "value": "=IF(T38,2500)+ IF(U38,4500)+ IF(V38,6000)",
+    "formula": "=IF(T38,2500)+ IF(U38,4500)+ IF(V38,6000)"
+  },
+  "L38": {
+    "value": "=IF(T38,500)+ IF(U38,1000)+ IF(V38,1200)",
+    "formula": "=IF(T38,500)+ IF(U38,1000)+ IF(V38,1200)"
+  },
+  "T38": {
+    "value": "False",
+    "formula": null
+  },
+  "U38": {
+    "value": "False",
+    "formula": null
+  },
+  "V38": {
+    "value": "False",
+    "formula": null
+  },
+  "A39": {
+    "value": "OVB",
+    "formula": null
+  },
+  "B39": {
+    "value": "Flytt av golvbrunnar",
+    "formula": null
+  },
+  "D39": {
+    "value": "1",
+    "formula": null
+  },
+  "F39": {
+    "value": "2",
+    "formula": null
+  },
+  "H39": {
+    "value": "3",
+    "formula": null
+  },
+  "K39": {
+    "value": "=IF(T39,1000)+ IF(U39,2000)+ IF(V39,2500)",
+    "formula": "=IF(T39,1000)+ IF(U39,2000)+ IF(V39,2500)"
+  },
+  "L39": {
+    "value": "=IF(T39,500)+ IF(U39,1000)+ IF(V39,1500)",
+    "formula": "=IF(T39,500)+ IF(U39,1000)+ IF(V39,1500)"
+  },
+  "T39": {
+    "value": "False",
+    "formula": null
+  },
+  "U39": {
+    "value": "False",
+    "formula": null
+  },
+  "V39": {
+    "value": "False",
+    "formula": null
+  },
+  "A40": {
+    "value": "OVB",
+    "formula": null
+  },
+  "B40": {
+    "value": "Utföra en extra golvbrunn",
+    "formula": null
+  },
+  "D40": {
+    "value": "Ja",
+    "formula": null
+  },
+  "F40": {
+    "value": "Nej",
+    "formula": null
+  },
+  "K40": {
+    "value": "=IF(T40,2500)+ IF(U40,0)",
+    "formula": "=IF(T40,2500)+ IF(U40,0)"
+  },
+  "L40": {
+    "value": "=IF(T40,1000)+ IF(U40,0)",
+    "formula": "=IF(T40,1000)+ IF(U40,0)"
+  },
+  "T40": {
+    "value": "False",
+    "formula": null
+  },
+  "U40": {
+    "value": "False",
+    "formula": null
+  },
+  "A41": {
+    "value": "OVEB",
+    "formula": null
+  },
+  "B41": {
+    "value": "Spåra golv och väggar",
+    "formula": null
+  },
+  "D41": {
+    "value": "Ja",
+    "formula": null
+  },
+  "F41": {
+    "value": "Nej",
+    "formula": null
+  },
+  "K41": {
+    "value": "=IF(T41,100)+ IF(U41,5000)",
+    "formula": "=IF(T41,100)+ IF(U41,5000)"
+  },
+  "T41": {
+    "value": "False",
+    "formula": null
+  },
+  "U41": {
+    "value": "False",
+    "formula": null
+  },
+  "A42": {
+    "value": "OVB",
+    "formula": null
+  },
+  "B42": {
+    "value": "Andra genomföringar från golvet ",
+    "formula": null
+  },
+  "D42": {
+    "value": "1",
+    "formula": null
+  },
+  "F42": {
+    "value": "2",
+    "formula": null
+  },
+  "H42": {
+    "value": "3",
+    "formula": null
+  },
+  "K42": {
+    "value": "=IF(T42,500)+ IF(U42,1000)+ IF(V42,1500)",
+    "formula": "=IF(T42,500)+ IF(U42,1000)+ IF(V42,1500)"
+  },
+  "L42": {
+    "value": "=IF(T42,500)+ IF(U42,1000)+ IF(V42,1500)",
+    "formula": "=IF(T42,500)+ IF(U42,1000)+ IF(V42,1500)"
+  },
+  "T42": {
+    "value": "False",
+    "formula": null
+  },
+  "U42": {
+    "value": "False",
+    "formula": null
+  },
+  "V42": {
+    "value": "False",
+    "formula": null
+  },
+  "A43": {
+    "value": "OVB",
+    "formula": null
+  },
+  "B43": {
+    "value": "Flytt av genomföringar till väggar",
+    "formula": null
+  },
+  "D43": {
+    "value": "1",
+    "formula": null
+  },
+  "F43": {
+    "value": "2",
+    "formula": null
+  },
+  "H43": {
+    "value": "3",
+    "formula": null
+  },
+  "K43": {
+    "value": "=IF(T43,2500)+ IF(U43,5000)+ IF(V43,7000)",
+    "formula": "=IF(T43,2500)+ IF(U43,5000)+ IF(V43,7000)"
+  },
+  "L43": {
+    "value": "=IF(T43,1500)+ IF(U43,2500)+ IF(V43,4000)",
+    "formula": "=IF(T43,1500)+ IF(U43,2500)+ IF(V43,4000)"
+  },
+  "T43": {
+    "value": "False",
+    "formula": null
+  },
+  "U43": {
+    "value": "False",
+    "formula": null
+  },
+  "V43": {
+    "value": "False",
+    "formula": null
+  },
+  "A44": {
+    "value": "OVB",
+    "formula": null
+  },
+  "B44": {
+    "value": "Byte av avloppsrör i golvet",
+    "formula": null
+  },
+  "D44": {
+    "value": "Ja",
+    "formula": null
+  },
+  "F44": {
+    "value": "Nej",
+    "formula": null
+  },
+  "K44": {
+    "value": "=IF(T44,2500)+ IF(U44,0)",
+    "formula": "=IF(T44,2500)+ IF(U44,0)"
+  },
+  "L44": {
+    "value": "=IF(T44,1000)+ IF(U44,0)",
+    "formula": "=IF(T44,1000)+ IF(U44,0)"
+  },
+  "T44": {
+    "value": "False",
+    "formula": null
+  },
+  "U44": {
+    "value": "False",
+    "formula": null
+  },
+  "A45": {
+    "value": "VB",
+    "formula": null
+  },
+  "B45": {
+    "value": "Avstängning av vatten finns",
+    "formula": null
+  },
+  "D45": {
+    "value": "I badrummet",
+    "formula": null
+  },
+  "F45": {
+    "value": "Utanför badrummet",
+    "formula": null
+  },
+  "H45": {
+    "value": "Husets källare",
+    "formula": null
+  },
+  "J45": {
+    "value": "Föreningens källare",
+    "formula": null
+  },
+  "K45": {
+    "value": "=IF(T45,0)+ IF(U45,0)+ IF(V45,0)+ IF(W45,1000)",
+    "formula": "=IF(T45,0)+ IF(U45,0)+ IF(V45,0)+ IF(W45,1000)"
+  },
+  "T45": {
+    "value": "False",
+    "formula": null
+  },
+  "U45": {
+    "value": "False",
+    "formula": null
+  },
+  "V45": {
+    "value": "False",
+    "formula": null
+  },
+  "W45": {
+    "value": "False",
+    "formula": null
+  },
+  "A46": {
+    "value": "EB",
+    "formula": null
+  },
+  "B46": {
+    "value": "Säkringsskåp",
+    "formula": null
+  },
+  "D46": {
+    "value": "Gamla proppar",
+    "formula": null
+  },
+  "F46": {
+    "value": "Moderna säkringar",
+    "formula": null
+  },
+  "K46": {
+    "value": "=IF(T46,0)+ IF(U46,0)",
+    "formula": "=IF(T46,0)+ IF(U46,0)"
+  },
+  "T46": {
+    "value": "False",
+    "formula": null
+  },
+  "U46": {
+    "value": "False",
+    "formula": null
+  },
+  "A47": {
+    "value": "E",
+    "formula": null
+  },
+  "B47": {
+    "value": "Jordfelsbrytare",
+    "formula": null
+  },
+  "D47": {
+    "value": "Finns",
+    "formula": null
+  },
+  "F47": {
+    "value": "Finns inte",
+    "formula": null
+  },
+  "K47": {
+    "value": "=IF(T47,0)+ IF(U47,2000)",
+    "formula": "=IF(T47,0)+ IF(U47,2000)"
+  },
+  "L47": {
+    "value": "=IF(T47,0)+ IF(U47,500)",
+    "formula": "=IF(T47,0)+ IF(U47,500)"
+  },
+  "T47": {
+    "value": "False",
+    "formula": null
+  },
+  "U47": {
+    "value": "False",
+    "formula": null
+  },
+  "A48": {
+    "value": "E",
+    "formula": null
+  },
+  "B48": {
+    "value": "Avstånd mellan elskåp till badrummet",
+    "formula": null
+  },
+  "D48": {
+    "value": "Upp till 5 meter",
+    "formula": null
+  },
+  "F48": {
+    "value": "Upp till 10 meter",
+    "formula": null
+  },
+  "H48": {
+    "value": "En annan våning",
+    "formula": null
+  },
+  "K48": {
+    "value": "=IF(T48,0)+ IF(U48,1000)+ IF(V48,2000)",
+    "formula": "=IF(T48,0)+ IF(U48,1000)+ IF(V48,2000)"
+  },
+  "L48": {
+    "value": "=IF(T48,0)+ IF(U48,500)+ IF(V48,1000)",
+    "formula": "=IF(T48,0)+ IF(U48,500)+ IF(V48,1000)"
+  },
+  "T48": {
+    "value": "False",
+    "formula": null
+  },
+  "U48": {
+    "value": "False",
+    "formula": null
+  },
+  "V48": {
+    "value": "False",
+    "formula": null
+  },
+  "A49": {
+    "value": "E",
+    "formula": null
+  },
+  "B49": {
+    "value": "Avståndet mellan närmaste kopplingsdosa till badrummet",
+    "formula": null
+  },
+  "D49": {
+    "value": "I närliggande vägg",
+    "formula": null
+  },
+  "F49": {
+    "value": "Långt bort",
+    "formula": null
+  },
+  "K49": {
+    "value": "=IF(T49,0)+ IF(U49,1000)",
+    "formula": "=IF(T49,0)+ IF(U49,1000)"
+  },
+  "L49": {
+    "value": "=IF(T49,0)+ IF(U49,500)",
+    "formula": "=IF(T49,0)+ IF(U49,500)"
+  },
+  "T49": {
+    "value": "False",
+    "formula": null
+  },
+  "U49": {
+    "value": "False",
+    "formula": null
+  },
+  "B50": {
+    "value": "Behövs följande apparater?",
+    "formula": null
+  },
+  "A51": {
+    "value": "OEB",
+    "formula": null
+  },
+  "B51": {
+    "value": "Taklampa/takdosa",
+    "formula": null
+  },
+  "D51": {
+    "value": "Ja",
+    "formula": null
+  },
+  "F51": {
+    "value": "Nej",
+    "formula": null
+  },
+  "K51": {
+    "value": "=IF(T51,0)+ IF(U51,0)",
+    "formula": "=IF(T51,0)+ IF(U51,0)"
+  },
+  "L51": {
+    "value": "=IF(T51,0)+ IF(U51,0)",
+    "formula": "=IF(T51,0)+ IF(U51,0)"
+  },
+  "T51": {
+    "value": "False",
+    "formula": null
+  },
+  "U51": {
+    "value": "False",
+    "formula": null
+  },
+  "A52": {
+    "value": "OEB",
+    "formula": null
+  },
+  "B52": {
+    "value": "Vägguttag",
+    "formula": null
+  },
+  "D52": {
+    "value": "Ja",
+    "formula": null
+  },
+  "F52": {
+    "value": "Nej",
+    "formula": null
+  },
+  "K52": {
+    "value": "=IF(T52,0)+ IF(U52,0)",
+    "formula": "=IF(T52,0)+ IF(U52,0)"
+  },
+  "L52": {
+    "value": "=IF(T52,0)+ IF(U52,0)",
+    "formula": "=IF(T52,0)+ IF(U52,0)"
+  },
+  "T52": {
+    "value": "False",
+    "formula": null
+  },
+  "U52": {
+    "value": "False",
+    "formula": null
+  },
+  "A53": {
+    "value": "OEB",
+    "formula": null
+  },
+  "B53": {
+    "value": "El handdukstork",
+    "formula": null
+  },
+  "D53": {
+    "value": "Ja",
+    "formula": null
+  },
+  "F53": {
+    "value": "Nej",
+    "formula": null
+  },
+  "K53": {
+    "value": "=IF(T53,1500)+ IF(U53,0)",
+    "formula": "=IF(T53,1500)+ IF(U53,0)"
+  },
+  "L53": {
+    "value": "=IF(T53,500)+ IF(U53,0)",
+    "formula": "=IF(T53,500)+ IF(U53,0)"
+  },
+  "T53": {
+    "value": "False",
+    "formula": null
+  },
+  "U53": {
+    "value": "False",
+    "formula": null
+  },
+  "A54": {
+    "value": "OEB",
+    "formula": null
+  },
+  "B54": {
+    "value": "El-golvvärme",
+    "formula": null
+  },
+  "D54": {
+    "value": "Ja",
+    "formula": null
+  },
+  "F54": {
+    "value": "Nej",
+    "formula": null
+  },
+  "K54": {
+    "value": "=IF(T54,7000)+ IF(U54,0)",
+    "formula": "=IF(T54,7000)+ IF(U54,0)"
+  },
+  "L54": {
+    "value": "=IF(T54,D26*1000)+ IF(U54,0)",
+    "formula": "=IF(T54,D26*1000)+ IF(U54,0)"
+  },
+  "T54": {
+    "value": "False",
+    "formula": null
+  },
+  "U54": {
+    "value": "False",
+    "formula": null
+  },
+  "A55": {
+    "value": "OEVB",
+    "formula": null
+  },
+  "B55": {
+    "value": "Tvättmaskin",
+    "formula": null
+  },
+  "D55": {
+    "value": "Ja",
+    "formula": null
+  },
+  "F55": {
+    "value": "Nej",
+    "formula": null
+  },
+  "K55": {
+    "value": "=IF(T55,4400)+ IF(U55,0)",
+    "formula": "=IF(T55,4400)+ IF(U55,0)"
+  },
+  "L55": {
+    "value": "=IF(T55,1000)+ IF(U55,0)",
+    "formula": "=IF(T55,1000)+ IF(U55,0)"
+  },
+  "T55": {
+    "value": "False",
+    "formula": null
+  },
+  "U55": {
+    "value": "False",
+    "formula": null
+  },
+  "A56": {
+    "value": "OEB",
+    "formula": null
+  },
+  "B56": {
+    "value": "Torktumlare",
+    "formula": null
+  },
+  "D56": {
+    "value": "Ja",
+    "formula": null
+  },
+  "F56": {
+    "value": "Nej",
+    "formula": null
+  },
+  "K56": {
+    "value": "=IF(T56,2000)+ IF(U56,0)",
+    "formula": "=IF(T56,2000)+ IF(U56,0)"
+  },
+  "L56": {
+    "value": "=IF(T56,500)+ IF(U56,0)",
+    "formula": "=IF(T56,500)+ IF(U56,0)"
+  },
+  "T56": {
+    "value": "False",
+    "formula": null
+  },
+  "U56": {
+    "value": "False",
+    "formula": null
+  },
+  "A57": {
+    "value": "OEB",
+    "formula": null
+  },
+  "B57": {
+    "value": "El i tvättställ/kommod",
+    "formula": null
+  },
+  "D57": {
+    "value": "Ja",
+    "formula": null
+  },
+  "F57": {
+    "value": "Nej",
+    "formula": null
+  },
+  "K57": {
+    "value": "=IF(T57,500)+ IF(U57,0)",
+    "formula": "=IF(T57,500)+ IF(U57,0)"
+  },
+  "L57": {
+    "value": "=IF(T57,500)+ IF(U57,0)",
+    "formula": "=IF(T57,500)+ IF(U57,0)"
+  },
+  "T57": {
+    "value": "False",
+    "formula": null
+  },
+  "U57": {
+    "value": "False",
+    "formula": null
+  },
+  "A58": {
+    "value": "OEB",
+    "formula": null
+  },
+  "B58": {
+    "value": "Extra uttag för strykjärn",
+    "formula": null
+  },
+  "D58": {
+    "value": "Ja",
+    "formula": null
+  },
+  "F58": {
+    "value": "Nej",
+    "formula": null
+  },
+  "K58": {
+    "value": "=IF(T58,500)+ IF(U58,0)",
+    "formula": "=IF(T58,500)+ IF(U58,0)"
+  },
+  "L58": {
+    "value": "=IF(T58,500)+ IF(U58,0)",
+    "formula": "=IF(T58,500)+ IF(U58,0)"
+  },
+  "T58": {
+    "value": "False",
+    "formula": null
+  },
+  "U58": {
+    "value": "False",
+    "formula": null
+  },
+  "A59": {
+    "value": "OEB",
+    "formula": null
+  },
+  "B59": {
+    "value": "Spotlights (antal)",
+    "formula": null
+  },
+  "D59": {
+    "value": "Antal",
+    "formula": null
+  },
+  "H59": {
+    "value": "Pris/ enhet",
+    "formula": null
+  },
+  "K59": {
+    "value": "=F59*J59",
+    "formula": "=F59*J59"
+  },
+  "L59": {
+    "value": "=F59*J59",
+    "formula": "=F59*J59"
+  },
+  "A60": {
+    "value": "OEB",
+    "formula": null
+  },
+  "B60": {
+    "value": "Taksänkning",
+    "formula": null
+  },
+  "D60": {
+    "value": "Ja",
+    "formula": null
+  },
+  "F60": {
+    "value": "Nej",
+    "formula": null
+  },
+  "K60": {
+    "value": "=IF(T60,2800+D25*F25*0.02,0)",
+    "formula": "=IF(T60,2800+D25*F25*0.02,0)"
+  },
+  "L60": {
+    "value": "=IF(T60,1200)+ IF(U60,0)",
+    "formula": "=IF(T60,1200)+ IF(U60,0)"
+  },
+  "T60": {
+    "value": "False",
+    "formula": null
+  },
+  "U60": {
+    "value": "False",
+    "formula": null
+  },
+  "B62": {
+    "value": "Behövs följande inredning?",
+    "formula": null
+  },
+  "A63": {
+    "value": "OB",
+    "formula": null
+  },
+  "B63": {
+    "value": "Inbyggd spegel i väggen",
+    "formula": null
+  },
+  "D63": {
+    "value": "Ja",
+    "formula": null
+  },
+  "F63": {
+    "value": "Nej",
+    "formula": null
+  },
+  "K63": {
+    "value": "=IF(T63,2500)+ IF(U63,0)",
+    "formula": "=IF(T63,2500)+ IF(U63,0)"
+  },
+  "L63": {
+    "value": "=IF(T63,0)+ IF(U63,0)",
+    "formula": "=IF(T63,0)+ IF(U63,0)"
+  },
+  "T63": {
+    "value": "False",
+    "formula": null
+  },
+  "U63": {
+    "value": "False",
+    "formula": null
+  },
+  "A64": {
+    "value": "OE",
+    "formula": null
+  },
+  "B64": {
+    "value": "Spegel med belysning",
+    "formula": null
+  },
+  "D64": {
+    "value": "Ja",
+    "formula": null
+  },
+  "F64": {
+    "value": "Nej",
+    "formula": null
+  },
+  "K64": {
+    "value": "=IF(T64,0)+ IF(U64,0)",
+    "formula": "=IF(T64,0)+ IF(U64,0)"
+  },
+  "L64": {
+    "value": "=IF(T64,0)+ IF(U64,0)",
+    "formula": "=IF(T64,0)+ IF(U64,0)"
+  },
+  "T64": {
+    "value": "False",
+    "formula": null
+  },
+  "U64": {
+    "value": "False",
+    "formula": null
+  },
+  "A65": {
+    "value": "OE",
+    "formula": null
+  },
+  "B65": {
+    "value": "Spegelskåp med belysning och uttag",
+    "formula": null
+  },
+  "D65": {
+    "value": "Ja",
+    "formula": null
+  },
+  "F65": {
+    "value": "Nej",
+    "formula": null
+  },
+  "K65": {
+    "value": "=IF(T65,0)+ IF(U65,0)",
+    "formula": "=IF(T65,0)+ IF(U65,0)"
+  },
+  "L65": {
+    "value": "=IF(T65,0)+ IF(U65,0)",
+    "formula": "=IF(T65,0)+ IF(U65,0)"
+  },
+  "T65": {
+    "value": "False",
+    "formula": null
+  },
+  "U65": {
+    "value": "False",
+    "formula": null
+  },
+  "A66": {
+    "value": "OVB",
+    "formula": null
+  },
+  "B66": {
+    "value": "Tvättställ med kommod",
+    "formula": null
+  },
+  "D66": {
+    "value": "Ja",
+    "formula": null
+  },
+  "F66": {
+    "value": "Nej",
+    "formula": null
+  },
+  "K66": {
+    "value": "=IF(T66,0)+ IF(U66,0)",
+    "formula": "=IF(T66,0)+ IF(U66,0)"
+  },
+  "L66": {
+    "value": "=IF(T66,0)+ IF(U66,0)",
+    "formula": "=IF(T66,0)+ IF(U66,0)"
+  },
+  "T66": {
+    "value": "False",
+    "formula": null
+  },
+  "U66": {
+    "value": "False",
+    "formula": null
+  },
+  "A67": {
+    "value": "OVB",
+    "formula": null
+  },
+  "B67": {
+    "value": "Duschblandare med handdusch",
+    "formula": null
+  },
+  "D67": {
+    "value": "Ja",
+    "formula": null
+  },
+  "F67": {
+    "value": "Nej",
+    "formula": null
+  },
+  "K67": {
+    "value": "=IF(T67,0)+ IF(U67,0)",
+    "formula": "=IF(T67,0)+ IF(U67,0)"
+  },
+  "L67": {
+    "value": "=IF(T67,0)+ IF(U67,0)",
+    "formula": "=IF(T67,0)+ IF(U67,0)"
+  },
+  "T67": {
+    "value": "False",
+    "formula": null
+  },
+  "U67": {
+    "value": "False",
+    "formula": null
+  },
+  "A68": {
+    "value": "OVB",
+    "formula": null
+  },
+  "B68": {
+    "value": "Duschblandare med tak- och handdusch",
+    "formula": null
+  },
+  "D68": {
+    "value": "Ja",
+    "formula": null
+  },
+  "F68": {
+    "value": "Nej",
+    "formula": null
+  },
+  "K68": {
+    "value": "=IF(T68,0)+ IF(U68,0)",
+    "formula": "=IF(T68,0)+ IF(U68,0)"
+  },
+  "L68": {
+    "value": "=IF(T68,0)+ IF(U68,0)",
+    "formula": "=IF(T68,0)+ IF(U68,0)"
+  },
+  "T68": {
+    "value": "False",
+    "formula": null
+  },
+  "U68": {
+    "value": "False",
+    "formula": null
+  },
+  "A69": {
+    "value": "OB",
+    "formula": null
+  },
+  "B69": {
+    "value": "Sätta upp en vägg som duschvägg",
+    "formula": null
+  },
+  "D69": {
+    "value": "Ja",
+    "formula": null
+  },
+  "F69": {
+    "value": "Nej",
+    "formula": null
+  },
+  "K69": {
+    "value": "=IF(T69,12000)+ IF(U69,0)",
+    "formula": "=IF(T69,12000)+ IF(U69,0)"
+  },
+  "L69": {
+    "value": "=IF(T69,2500)+ IF(U69,0)",
+    "formula": "=IF(T69,2500)+ IF(U69,0)"
+  },
+  "T69": {
+    "value": "False",
+    "formula": null
+  },
+  "U69": {
+    "value": "False",
+    "formula": null
+  },
+  "A70": {
+    "value": "OB",
+    "formula": null
+  },
+  "B70": {
+    "value": "Sätta upp en fast duschvägg av glasblock",
+    "formula": null
+  },
+  "D70": {
+    "value": "Ja",
+    "formula": null
+  },
+  "F70": {
+    "value": "Nej",
+    "formula": null
+  },
+  "K70": {
+    "value": "=IF(T70,12000)+ IF(U70,0)",
+    "formula": "=IF(T70,12000)+ IF(U70,0)"
+  },
+  "L70": {
+    "value": "=IF(T70,4000)+ IF(U70,0)",
+    "formula": "=IF(T70,4000)+ IF(U70,0)"
+  },
+  "T70": {
+    "value": "False",
+    "formula": null
+  },
+  "U70": {
+    "value": "False",
+    "formula": null
+  },
+  "A71": {
+    "value": "OB",
+    "formula": null
+  },
+  "B71": {
+    "value": "Montering av en glas-duschvägg",
+    "formula": null
+  },
+  "D71": {
+    "value": "Ja",
+    "formula": null
+  },
+  "F71": {
+    "value": "Nej",
+    "formula": null
+  },
+  "K71": {
+    "value": "=IF(T71,500)+ IF(U71,0)",
+    "formula": "=IF(T71,500)+ IF(U71,0)"
+  },
+  "L71": {
+    "value": "=IF(T71,0)+ IF(U71,0)",
+    "formula": "=IF(T71,0)+ IF(U71,0)"
+  },
+  "T71": {
+    "value": "False",
+    "formula": null
+  },
+  "U71": {
+    "value": "False",
+    "formula": null
+  },
+  "A72": {
+    "value": "OB",
+    "formula": null
+  },
+  "B72": {
+    "value": "Montering av duschdörrar",
+    "formula": null
+  },
+  "D72": {
+    "value": "Ja",
+    "formula": null
+  },
+  "F72": {
+    "value": "Nej",
+    "formula": null
+  },
+  "K72": {
+    "value": "=IF(T72,1000)+ IF(U72,0)",
+    "formula": "=IF(T72,1000)+ IF(U72,0)"
+  },
+  "L72": {
+    "value": "=IF(T72,0)+ IF(U72,0)",
+    "formula": "=IF(T72,0)+ IF(U72,0)"
+  },
+  "T72": {
+    "value": "False",
+    "formula": null
+  },
+  "U72": {
+    "value": "False",
+    "formula": null
+  },
+  "A73": {
+    "value": "OVB",
+    "formula": null
+  },
+  "B73": {
+    "value": "Golvbrunnen i duschen",
+    "formula": null
+  },
+  "D73": {
+    "value": "Normal",
+    "formula": null
+  },
+  "F73": {
+    "value": "Avlång",
+    "formula": null
+  },
+  "K73": {
+    "value": "=IF(T73,0)+ IF(U73,2000)",
+    "formula": "=IF(T73,0)+ IF(U73,2000)"
+  },
+  "L73": {
+    "value": "=IF(T73,0)+ IF(U73,0)",
+    "formula": "=IF(T73,0)+ IF(U73,0)"
+  },
+  "T73": {
+    "value": "False",
+    "formula": null
+  },
+  "U73": {
+    "value": "False",
+    "formula": null
+  },
+  "A74": {
+    "value": "OBV",
+    "formula": null
+  },
+  "B74": {
+    "value": "Badkar",
+    "formula": null
+  },
+  "D74": {
+    "value": "Fristående",
+    "formula": null
+  },
+  "F74": {
+    "value": "Inbyggt",
+    "formula": null
+  },
+  "K74": {
+    "value": "=IF(T74,0)+ IF(U74,15000)",
+    "formula": "=IF(T74,0)+ IF(U74,15000)"
+  },
+  "L74": {
+    "value": "=IF(T74,0)+ IF(U74,2000)",
+    "formula": "=IF(T74,0)+ IF(U74,2000)"
+  },
+  "T74": {
+    "value": "False",
+    "formula": null
+  },
+  "U74": {
+    "value": "False",
+    "formula": null
+  },
+  "A75": {
+    "value": "OBV",
+    "formula": null
+  },
+  "B75": {
+    "value": "Toalett",
+    "formula": null
+  },
+  "D75": {
+    "value": "Fristående",
+    "formula": null
+  },
+  "F75": {
+    "value": "Vägg",
+    "formula": null
+  },
+  "K75": {
+    "value": "=IF(T75,0)+ IF(U75,6500)",
+    "formula": "=IF(T75,0)+ IF(U75,6500)"
+  },
+  "L75": {
+    "value": "=IF(T75,0)+ IF(U75,2000)",
+    "formula": "=IF(T75,0)+ IF(U75,2000)"
+  },
+  "T75": {
+    "value": "False",
+    "formula": null
+  },
+  "U75": {
+    "value": "False",
+    "formula": null
+  },
+  "A76": {
+    "value": "OB",
+    "formula": null
+  },
+  "B76": {
+    "value": "Silikondragning, applicering",
+    "formula": null
+  },
+  "D76": {
+    "value": "Ja",
+    "formula": null
+  },
+  "F76": {
+    "value": "Nej",
+    "formula": null
+  },
+  "K76": {
+    "value": "=IF(T76,0)+ IF(U76,0)",
+    "formula": "=IF(T76,0)+ IF(U76,0)"
+  },
+  "L76": {
+    "value": "=IF(T76,0)+ IF(U76,0)",
+    "formula": "=IF(T76,0)+ IF(U76,0)"
+  },
+  "T76": {
+    "value": "False",
+    "formula": null
+  },
+  "U76": {
+    "value": "False",
+    "formula": null
+  },
+  "A77": {
+    "value": "OB",
+    "formula": null
+  },
+  "B77": {
+    "value": "Byte av dörrfoder invändingt",
+    "formula": null
+  },
+  "D77": {
+    "value": "Ja",
+    "formula": null
+  },
+  "F77": {
+    "value": "Nej",
+    "formula": null
+  },
+  "K77": {
+    "value": "=IF(T77,500)+ IF(U77,0)",
+    "formula": "=IF(T77,500)+ IF(U77,0)"
+  },
+  "L77": {
+    "value": "=IF(T77,250)+ IF(U77,0)",
+    "formula": "=IF(T77,250)+ IF(U77,0)"
+  },
+  "T77": {
+    "value": "False",
+    "formula": null
+  },
+  "U77": {
+    "value": "False",
+    "formula": null
+  },
+  "A78": {
+    "value": "OB",
+    "formula": null
+  },
+  "B78": {
+    "value": "Byte av dörrfoder utvändigt",
+    "formula": null
+  },
+  "D78": {
+    "value": "Ja",
+    "formula": null
+  },
+  "F78": {
+    "value": "Nej",
+    "formula": null
+  },
+  "K78": {
+    "value": "=IF(T78,500)+ IF(U78,0)",
+    "formula": "=IF(T78,500)+ IF(U78,0)"
+  },
+  "L78": {
+    "value": "=IF(T78,250)+ IF(U78,0)",
+    "formula": "=IF(T78,250)+ IF(U78,0)"
+  },
+  "T78": {
+    "value": "False",
+    "formula": null
+  },
+  "U78": {
+    "value": "False",
+    "formula": null
+  },
+  "A79": {
+    "value": "OB",
+    "formula": null
+  },
+  "B79": {
+    "value": "Byte av dörrkarm",
+    "formula": null
+  },
+  "D79": {
+    "value": "Ja",
+    "formula": null
+  },
+  "F79": {
+    "value": "Nej",
+    "formula": null
+  },
+  "K79": {
+    "value": "=IF(T79,1000)+ IF(U79,0)",
+    "formula": "=IF(T79,1000)+ IF(U79,0)"
+  },
+  "L79": {
+    "value": "=IF(T79,1000)+ IF(U79,0)",
+    "formula": "=IF(T79,1000)+ IF(U79,0)"
+  },
+  "T79": {
+    "value": "False",
+    "formula": null
+  },
+  "U79": {
+    "value": "False",
+    "formula": null
+  },
+  "A80": {
+    "value": "OB",
+    "formula": null
+  },
+  "B80": {
+    "value": "Byte av dörrblad",
+    "formula": null
+  },
+  "D80": {
+    "value": "Ja",
+    "formula": null
+  },
+  "F80": {
+    "value": "Nej",
+    "formula": null
+  },
+  "K80": {
+    "value": "=IF(T80,0)+ IF(U80,0)",
+    "formula": "=IF(T80,0)+ IF(U80,0)"
+  },
+  "L80": {
+    "value": "=IF(T80,0)+ IF(U80,0)",
+    "formula": "=IF(T80,0)+ IF(U80,0)"
+  },
+  "T80": {
+    "value": "False",
+    "formula": null
+  },
+  "U80": {
+    "value": "False",
+    "formula": null
+  },
+  "A81": {
+    "value": "OB",
+    "formula": null
+  },
+  "B81": {
+    "value": "Byte / uppfräschning av tröskel",
+    "formula": null
+  },
+  "D81": {
+    "value": "Ja",
+    "formula": null
+  },
+  "F81": {
+    "value": "Nej",
+    "formula": null
+  },
+  "K81": {
+    "value": "=IF(T81,0)+ IF(U81,0)",
+    "formula": "=IF(T81,0)+ IF(U81,0)"
+  },
+  "L81": {
+    "value": "=IF(T81,0)+ IF(U81,0)",
+    "formula": "=IF(T81,0)+ IF(U81,0)"
+  },
+  "T81": {
+    "value": "False",
+    "formula": null
+  },
+  "U81": {
+    "value": "False",
+    "formula": null
+  },
+  "A82": {
+    "value": "OB",
+    "formula": null
+  },
+  "B82": {
+    "value": "Fönster ommålning",
+    "formula": null
+  },
+  "D82": {
+    "value": "Ja",
+    "formula": null
+  },
+  "F82": {
+    "value": "Nej",
+    "formula": null
+  },
+  "K82": {
+    "value": "=IF(T82,500)+ IF(U82,0)",
+    "formula": "=IF(T82,500)+ IF(U82,0)"
+  },
+  "L82": {
+    "value": "=IF(T82,250)+ IF(U82,0)",
+    "formula": "=IF(T82,250)+ IF(U82,0)"
+  },
+  "T82": {
+    "value": "False",
+    "formula": null
+  },
+  "U82": {
+    "value": "False",
+    "formula": null
+  },
+  "A83": {
+    "value": "OVB",
+    "formula": null
+  },
+  "B83": {
+    "value": "Dolda rördragningar",
+    "formula": null
+  },
+  "D83": {
+    "value": "Ja",
+    "formula": null
+  },
+  "F83": {
+    "value": "Nej",
+    "formula": null
+  },
+  "K83": {
+    "value": "=IF(T83,9000)+ IF(U83,0)",
+    "formula": "=IF(T83,9000)+ IF(U83,0)"
+  },
+  "L83": {
+    "value": "=IF(T83,3000)+ IF(U83,0)",
+    "formula": "=IF(T83,3000)+ IF(U83,0)"
+  },
+  "T83": {
+    "value": "False",
+    "formula": null
+  },
+  "U83": {
+    "value": "False",
+    "formula": null
+  },
+  "A84": {
+    "value": "OVB",
+    "formula": null
+  },
+  "B84": {
+    "value": "Utanpåliggande rördragningar",
+    "formula": null
+  },
+  "D84": {
+    "value": "Ja",
+    "formula": null
+  },
+  "F84": {
+    "value": "Nej",
+    "formula": null
+  },
+  "K84": {
+    "value": "=IF(T84,0)+ IF(U84,0)",
+    "formula": "=IF(T84,0)+ IF(U84,0)"
+  },
+  "L84": {
+    "value": "=IF(T84,0)+ IF(U84,0)",
+    "formula": "=IF(T84,0)+ IF(U84,0)"
+  },
+  "T84": {
+    "value": "False",
+    "formula": null
+  },
+  "U84": {
+    "value": "False",
+    "formula": null
+  },
+  "A85": {
+    "value": "OVB",
+    "formula": null
+  },
+  "B85": {
+    "value": "Dold takdusch",
+    "formula": null
+  },
+  "D85": {
+    "value": "Ja",
+    "formula": null
+  },
+  "F85": {
+    "value": "Nej",
+    "formula": null
+  },
+  "K85": {
+    "value": "=IF(T85,8000)+ IF(U85,0)",
+    "formula": "=IF(T85,8000)+ IF(U85,0)"
+  },
+  "L85": {
+    "value": "=IF(T85,2500)+ IF(U85,0)",
+    "formula": "=IF(T85,2500)+ IF(U85,0)"
+  },
+  "T85": {
+    "value": "False",
+    "formula": null
+  },
+  "U85": {
+    "value": "False",
+    "formula": null
+  },
+  "A86": {
+    "value": "OVB",
+    "formula": null
+  },
+  "B86": {
+    "value": "Antal dolda blandare",
+    "formula": null
+  },
+  "D86": {
+    "value": "Antal",
+    "formula": null
+  },
+  "H86": {
+    "value": "Pris/enhet",
+    "formula": null
+  },
+  "K86": {
+    "value": "=F86*J86",
+    "formula": "=F86*J86"
+  },
+  "L86": {
+    "value": "=IF(T86,2500)+ IF(U86,0)",
+    "formula": "=IF(T86,2500)+ IF(U86,0)"
+  },
+  "A87": {
+    "value": "OVB",
+    "formula": null
+  },
+  "B87": {
+    "value": "Räddning av befintlig vattenburen golvvärme",
+    "formula": null
+  },
+  "D87": {
+    "value": "Ja",
+    "formula": null
+  },
+  "F87": {
+    "value": "Nej",
+    "formula": null
+  },
+  "K87": {
+    "value": "=IF(T87,5000)+ IF(U87,0)",
+    "formula": "=IF(T87,5000)+ IF(U87,0)"
+  },
+  "L87": {
+    "value": "=IF(T87,1000)+ IF(U87,0)",
+    "formula": "=IF(T87,1000)+ IF(U87,0)"
+  },
+  "T87": {
+    "value": "False",
+    "formula": null
+  },
+  "U87": {
+    "value": "False",
+    "formula": null
+  },
+  "A88": {
+    "value": "OVB",
+    "formula": null
+  },
+  "B88": {
+    "value": "Läggning av ny vattenburen golvvärme",
+    "formula": null
+  },
+  "D88": {
+    "value": "Ja",
+    "formula": null
+  },
+  "F88": {
+    "value": "Nej",
+    "formula": null
+  },
+  "K88": {
+    "value": "=IF(T88,5000+D26*2000)+ IF(U88,0)",
+    "formula": "=IF(T88,5000+D26*2000)+ IF(U88,0)"
+  },
+  "L88": {
+    "value": "=IF(T88,10000)+ IF(U88,0)",
+    "formula": "=IF(T88,10000)+ IF(U88,0)"
+  },
+  "T88": {
+    "value": "False",
+    "formula": null
+  },
+  "U88": {
+    "value": "False",
+    "formula": null
+  },
+  "A89": {
+    "value": "OB",
+    "formula": null
+  },
+  "B89": {
+    "value": "Plattsättning upp till tak",
+    "formula": null
+  },
+  "D89": {
+    "value": "Ja",
+    "formula": null
+  },
+  "F89": {
+    "value": "Nej",
+    "formula": null
+  },
+  "A90": {
+    "value": "OB",
+    "formula": null
+  },
+  "B90": {
+    "value": "Höjd på plattsättning på väggar",
+    "formula": null
+  },
+  "D90": {
+    "value": "Höjd i cm",
+    "formula": null
+  },
+  "A91": {
+    "value": "OB",
+    "formula": null
+  },
+  "B91": {
+    "value": "Nischar utan spotlight",
+    "formula": null
+  },
+  "D91": {
+    "value": "Antal",
+    "formula": null
+  },
+  "H91": {
+    "value": "Pris/enhet",
+    "formula": null
+  },
+  "K91": {
+    "value": "=F91*J91",
+    "formula": "=F91*J91"
+  },
+  "A92": {
+    "value": "OEB",
+    "formula": null
+  },
+  "B92": {
+    "value": "Nischar med spotlight",
+    "formula": null
+  },
+  "D92": {
+    "value": "Antal",
+    "formula": null
+  },
+  "H92": {
+    "value": "Pris/enhet",
+    "formula": null
+  },
+  "K92": {
+    "value": "=F92*J92",
+    "formula": "=F92*J92"
+  },
+  "A93": {
+    "value": "B",
+    "formula": null
+  },
+  "B93": {
+    "value": "Storlek golvplattor (10*10 till 20*20)",
+    "formula": null
+  },
+  "D93": {
+    "value": "Mått",
+    "formula": null
+  },
+  "A94": {
+    "value": "O",
+    "formula": null
+  },
+  "B94": {
+    "value": "Avvikelse i storlek för golvplattor ",
+    "formula": null
+  },
+  "D94": {
+    "value": "Antal",
+    "formula": null
+  },
+  "H94": {
+    "value": "Pris/enhet",
+    "formula": null
+  },
+  "K94": {
+    "value": "=F94*J94",
+    "formula": "=F94*J94"
+  },
+  "L94": {
+    "value": "=F94*J94",
+    "formula": "=F94*J94"
+  },
+  "A95": {
+    "value": "B",
+    "formula": null
+  },
+  "B95": {
+    "value": "Väggplattor (15*15 till 60*60)",
+    "formula": null
+  },
+  "D95": {
+    "value": "Mått",
+    "formula": null
+  },
+  "A96": {
+    "value": "O",
+    "formula": null
+  },
+  "B96": {
+    "value": "Avvikelse i storlek för väggplattor",
+    "formula": null
+  },
+  "D96": {
+    "value": "Antal",
+    "formula": null
+  },
+  "H96": {
+    "value": "Pris/enhet",
+    "formula": null
+  },
+  "K96": {
+    "value": "=F96*J96",
+    "formula": "=F96*J96"
+  },
+  "L96": {
+    "value": "=F96*J96",
+    "formula": "=F96*J96"
+  },
+  "A97": {
+    "value": "B",
+    "formula": null
+  },
+  "B97": {
+    "value": "Antal färger fog",
+    "formula": null
+  },
+  "D97": {
+    "value": "Antal",
+    "formula": null
+  },
+  "H97": {
+    "value": "Pris/enhet",
+    "formula": null
+  },
+  "K97": {
+    "value": "=F97*J97",
+    "formula": "=F97*J97"
+  },
+  "L97": {
+    "value": "=F97*J97",
+    "formula": "=F97*J97"
+  },
+  "B98": {
+    "value": "Arbetstid målning av tak",
+    "formula": null
+  },
+  "D98": {
+    "value": "Timmar",
+    "formula": null
+  },
+  "H98": {
+    "value": "Pris/h",
+    "formula": null
+  },
+  "K98": {
+    "value": "=F98*J98",
+    "formula": "=F98*J98"
+  },
+  "A99": {
+    "value": "OB",
+    "formula": null
+  },
+  "B99": {
+    "value": "Målning av tak",
+    "formula": null
+  },
+  "D99": {
+    "value": "Antal kvm",
+    "formula": null
+  },
+  "H99": {
+    "value": "Pris/enhet",
+    "formula": null
+  },
+  "L99": {
+    "value": "=F100*J100",
+    "formula": "=F100*J100"
+  },
+  "A100": {
+    "value": "O",
+    "formula": null
+  },
+  "B100": {
+    "value": "Arbetstid målning av okaklade väggar",
+    "formula": null
+  },
+  "D100": {
+    "value": "Timmar",
+    "formula": null
+  },
+  "H100": {
+    "value": "Pris/h",
+    "formula": null
+  },
+  "K100": {
+    "value": "=F100*J100",
+    "formula": "=F100*J100"
+  },
+  "A101": {
+    "value": "OB",
+    "formula": null
+  },
+  "B101": {
+    "value": "Målning av okaklade väggar",
+    "formula": null
+  },
+  "D101": {
+    "value": "Antal kvm",
+    "formula": null
+  },
+  "H101": {
+    "value": "Pris/enhet",
+    "formula": null
+  },
+  "L101": {
+    "value": "=F101*J101",
+    "formula": "=F101*J101"
+  },
+  "A102": {
+    "value": "OB",
+    "formula": null
+  },
+  "B102": {
+    "value": "Avetablering och grovstädning",
+    "formula": null
+  },
+  "D102": {
+    "value": "Ja",
+    "formula": null
+  },
+  "F102": {
+    "value": "Nej",
+    "formula": null
+  },
+  "K102": {
+    "value": "=IF(T102,0)+ IF(U102,0)",
+    "formula": "=IF(T102,0)+ IF(U102,0)"
+  },
+  "L102": {
+    "value": "=IF(T102,0)+ IF(U102,0)",
+    "formula": "=IF(T102,0)+ IF(U102,0)"
+  },
+  "T102": {
+    "value": "False",
+    "formula": null
+  },
+  "U102": {
+    "value": "False",
+    "formula": null
+  },
+  "B103": {
+    "value": "Byggsäck",
+    "formula": null
+  },
+  "D103": {
+    "value": "Antal säckar",
+    "formula": null
+  },
+  "H103": {
+    "value": "Pris per säck",
+    "formula": null
+  },
+  "M103": {
+    "value": "=F103*J103",
+    "formula": "=F103*J103"
+  },
+  "B104": {
+    "value": "Plus-rad",
+    "formula": null
+  },
+  "D104": {
+    "value": "Arbete",
+    "formula": null
+  },
+  "F104": {
+    "value": "VVS/EL/BYGG?",
+    "formula": null
+  },
+  "H104": {
+    "value": "Kostnad",
+    "formula": null
+  },
+  "B105": {
+    "value": "Noteringar för diverse arbete",
+    "formula": null
+  },
+  "W123": {
+    "value": "Arbetskostnad",
+    "formula": null
+  },
+  "X123": {
+    "value": "Materialkostnad",
+    "formula": null
+  },
+  "Y123": {
+    "value": "Servicebil, trängselskatt, parkering, byggsäck",
+    "formula": null
+  },
+  "V124": {
+    "value": "Summa ",
+    "formula": null
+  },
+  "W124": {
+    "value": "=SUM(K:K)",
+    "formula": "=SUM(K:K)"
+  },
+  "X124": {
+    "value": "=SUM(L:L)",
+    "formula": "=SUM(L:L)"
+  },
+  "Y124": {
+    "value": "=SUM(M:M)",
+    "formula": "=SUM(M:M)"
+  },
+  "V125": {
+    "value": "Rabatt",
+    "formula": null
+  },
+  "W125": {
+    "value": "1000",
+    "formula": null
+  },
+  "X125": {
+    "value": "1000",
+    "formula": null
+  },
+  "Y125": {
+    "value": "1000",
+    "formula": null
+  },
+  "V126": {
+    "value": "Efter rabatt",
+    "formula": null
+  },
+  "W126": {
+    "value": "=W124-W125",
+    "formula": "=W124-W125"
+  },
+  "X126": {
+    "value": "=X124-X125",
+    "formula": "=X124-X125"
+  },
+  "Y126": {
+    "value": "=Y124-Y125",
+    "formula": "=Y124-Y125"
+  },
+  "V127": {
+    "value": "Rotavdrag",
+    "formula": null
+  },
+  "W127": {
+    "value": "=SUM(W126)*0.3",
+    "formula": "=SUM(W126)*0.3"
+  },
+  "V128": {
+    "value": "Betalas av kunden",
+    "formula": null
+  },
+  "W128": {
+    "value": "=SUM(W126)-(W127)",
+    "formula": "=SUM(W126)-(W127)"
+  },
+  "X128": {
+    "value": "=SUM(X124)-X125",
+    "formula": "=SUM(X124)-X125"
+  },
+  "Y128": {
+    "value": "=SUM(Y124)-Y125",
+    "formula": "=SUM(Y124)-Y125"
+  },
+  "V131": {
+    "value": "Totalt betalas av kunden efter rabatt",
+    "formula": null
+  },
+  "W131": {
+    "value": "=SUM(W128+X128+Y128)",
+    "formula": "=SUM(W128+X128+Y128)"
+  }
+}

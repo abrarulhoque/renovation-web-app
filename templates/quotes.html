@@ -1,0 +1,204 @@
+{% extends "base.html" %} {% block title %}All Renovation Quotes{% endblock %}
+{% block content %}
+<div class="container mt-4">
+  <h1 class="mb-4">All Processed Quotes</h1>
+
+  {% if quotes %}
+  <div class="row">
+    {% for quote in quotes %}
+    <div class="col-md-12 mb-3">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center">
+            <h5 class="card-title">
+              <i
+                class="material-icons align-middle me-2"
+                style="font-size: 1.2rem"
+                >person</i
+              >
+              <a
+                href="{{ url_for('quote_details', quote_id=quote.id) }}"
+                class="text-decoration-none"
+              >
+                {{ quote.customer_name }}
+              </a>
+            </h5>
+            <small class="text-muted">Created: {{ quote.created_at }}</small>
+          </div>
+
+          <div class="row mt-3">
+            <div class="col-md-6">
+              <p class="mb-1">
+                <i
+                  class="material-icons align-middle me-2"
+                  style="font-size: 1rem"
+                  >email</i
+                >
+                {{ quote.email }}
+              </p>
+              <p class="mb-1">
+                <i
+                  class="material-icons align-middle me-2"
+                  style="font-size: 1rem"
+                  >phone</i
+                >
+                {{ quote.phone }}
+              </p>
+            </div>
+            <div class="col-md-6">
+              <p class="mb-1">
+                <i
+                  class="material-icons align-middle me-2"
+                  style="font-size: 1rem"
+                  >home</i
+                >
+                {{ quote.address }}
+              </p>
+              <p class="mb-1">
+                <i
+                  class="material-icons align-middle me-2"
+                  style="font-size: 1rem"
+                  >straighten</i
+                >
+                Floor Area: {{ quote.floor_area }} m²
+              </p>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-between mt-3">
+            <div>
+              <a
+                href="{{ url_for('quote_details', quote_id=quote.id) }}"
+                class="btn btn-sm btn-primary"
+              >
+                <i class="material-icons align-middle" style="font-size: 1rem"
+                  >visibility</i
+                >
+                View Details
+              </a>
+
+              {% if quote.document_path %}
+              <a
+                href="{{ url_for('download_document', filename=quote.document_path) }}"
+                class="btn btn-sm btn-success ms-2"
+              >
+                <i class="material-icons align-middle" style="font-size: 1rem"
+                  >download</i
+                >
+                Download Quote
+              </a>
+              {% endif %} {% if quote.workorder_paths and
+              quote.workorder_paths|length > 0 %}
+              <div class="dropdown d-inline-block ms-2">
+                <button
+                  class="btn btn-sm btn-info dropdown-toggle"
+                  type="button"
+                  id="workorderDropdown{{ quote.id }}"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="material-icons align-middle" style="font-size: 1rem"
+                    >engineering</i
+                  >
+                  Workorders
+                </button>
+                <ul
+                  class="dropdown-menu"
+                  aria-labelledby="workorderDropdown{{ quote.id }}"
+                >
+                  {% for workorder_path in quote.workorder_paths %} {% if
+                  'electrician' in workorder_path|lower %}
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="{{ url_for('download_document', filename=workorder_path) }}"
+                    >
+                      <i
+                        class="material-icons align-middle me-1"
+                        style="font-size: 1rem"
+                        >electrical_services</i
+                      >
+                      Electrician
+                    </a>
+                  </li>
+                  {% elif 'plumber' in workorder_path|lower %}
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="{{ url_for('download_document', filename=workorder_path) }}"
+                    >
+                      <i
+                        class="material-icons align-middle me-1"
+                        style="font-size: 1rem"
+                        >plumbing</i
+                      >
+                      Plumber
+                    </a>
+                  </li>
+                  {% elif 'carpenter' in workorder_path|lower %}
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="{{ url_for('download_document', filename=workorder_path) }}"
+                    >
+                      <i
+                        class="material-icons align-middle me-1"
+                        style="font-size: 1rem"
+                        >carpenter</i
+                      >
+                      Carpenter
+                    </a>
+                  </li>
+                  {% else %}
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="{{ url_for('download_document', filename=workorder_path) }}"
+                    >
+                      <i
+                        class="material-icons align-middle me-1"
+                        style="font-size: 1rem"
+                        >description</i
+                      >
+                      Workorder
+                    </a>
+                  </li>
+                  {% endif %} {% endfor %}
+                </ul>
+              </div>
+              {% endif %}
+            </div>
+
+            <form
+              action="{{ url_for('delete_quote', quote_id=quote.id) }}"
+              method="post"
+              onsubmit="return confirm('Are you sure you want to delete this quote?');"
+            >
+              <button type="submit" class="btn btn-sm btn-danger">
+                <i class="material-icons align-middle" style="font-size: 1rem"
+                  >delete</i
+                >
+                Delete
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="alert alert-info">
+    <i class="material-icons align-middle me-2">info</i>
+    No quotes found. <a href="{{ url_for('index') }}">Create a new quote</a>.
+  </div>
+  {% endif %}
+
+  <div class="mt-4">
+    <a href="{{ url_for('index') }}" class="btn btn-primary">
+      <i class="material-icons align-middle me-2">add</i>
+      Create New Quote
+    </a>
+  </div>
+</div>
+{% endblock %}

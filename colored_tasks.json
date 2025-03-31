@@ -1,0 +1,541 @@
+[
+  {
+    "row": 3,
+    "task": "O",
+    "clean_task": "Personens namn",
+    "markers": "O",
+    "color": 6
+  },
+  {
+    "row": 4,
+    "task": "O",
+    "clean_task": "Telefonnummer",
+    "markers": "O",
+    "color": 6
+  },
+  {
+    "row": 5,
+    "task": "O",
+    "clean_task": "Adress fullst\u00e4ndig",
+    "markers": "O",
+    "color": 6
+  },
+  {
+    "row": 7,
+    "task": "EVB",
+    "clean_task": "Portkod",
+    "markers": "EVB",
+    "color": 6
+  },
+  {
+    "row": 23,
+    "task": "O",
+    "clean_task": "T\u00e4cking av golv",
+    "markers": "O",
+    "color": 8
+  },
+  {
+    "row": 25,
+    "task": "EVB",
+    "clean_task": "M\u00e5tt p\u00e5 badrumet.   BxLxH",
+    "markers": "EVB",
+    "color": 6
+  },
+  {
+    "row": 26,
+    "task": "EVB",
+    "clean_task": "Golvyta",
+    "markers": "EVB",
+    "color": 6
+  },
+  {
+    "row": 29,
+    "task": "EVB",
+    "clean_task": "Antal omplaceringar ",
+    "markers": "EVB",
+    "color": 8
+  },
+  {
+    "row": 30,
+    "task": "O",
+    "clean_task": "Etablering",
+    "markers": "O",
+    "color": 8
+  },
+  {
+    "row": 31,
+    "task": "OB",
+    "clean_task": "Flytspackling",
+    "markers": "OB",
+    "color": 8
+  },
+  {
+    "row": 32,
+    "task": "OB",
+    "clean_task": " Ta in byggmaterial",
+    "markers": "OB",
+    "color": 8
+  },
+  {
+    "row": 33,
+    "task": "OVB",
+    "clean_task": "Omplacering av toalett (ange antal cm)",
+    "markers": "OVB",
+    "color": 8
+  },
+  {
+    "row": 34,
+    "task": "OVB",
+    "clean_task": "Omplacering av tv\u00e4ttst\u00e4ll (ange antal cm)",
+    "markers": "OVB",
+    "color": 8
+  },
+  {
+    "row": 35,
+    "task": "OVB",
+    "clean_task": "Omplacering av dusch (ange antal cm)",
+    "markers": "OVB",
+    "color": 8
+  },
+  {
+    "row": 36,
+    "task": "OVB",
+    "clean_task": "Omplacering av badkar (ange antal cm)",
+    "markers": "OVB",
+    "color": 8
+  },
+  {
+    "row": 37,
+    "task": "OVB",
+    "clean_task": "Omplacering av handdukstork(ange antal cm)",
+    "markers": "OVB",
+    "color": 8
+  },
+  {
+    "row": 38,
+    "task": "OVB",
+    "clean_task": "Antal byte av golvbrunnar",
+    "markers": "OVB",
+    "color": 8
+  },
+  {
+    "row": 39,
+    "task": "OVB",
+    "clean_task": "Flytt av golvbrunnar",
+    "markers": "OVB",
+    "color": 8
+  },
+  {
+    "row": 40,
+    "task": "OVB",
+    "clean_task": "Utf\u00f6ra en extra golvbrunn",
+    "markers": "OVB",
+    "color": 8
+  },
+  {
+    "row": 41,
+    "task": "OVEB",
+    "clean_task": "Sp\u00e5ra golv och v\u00e4ggar",
+    "markers": "OEVB",
+    "color": 8
+  },
+  {
+    "row": 42,
+    "task": "OVB",
+    "clean_task": "Andra genomf\u00f6ringar fr\u00e5n golvet ",
+    "markers": "OVB",
+    "color": 8
+  },
+  {
+    "row": 43,
+    "task": "OVB",
+    "clean_task": "Flytt av genomf\u00f6ringar till v\u00e4ggar",
+    "markers": "OVB",
+    "color": 8
+  },
+  {
+    "row": 44,
+    "task": "OVB",
+    "clean_task": "Byte av avloppsr\u00f6r i golvet",
+    "markers": "OVB",
+    "color": 8
+  },
+  {
+    "row": 45,
+    "task": "VB",
+    "clean_task": "Avst\u00e4ngning av vatten finns",
+    "markers": "VB",
+    "color": 8
+  },
+  {
+    "row": 46,
+    "task": "EB",
+    "clean_task": "S\u00e4kringssk\u00e5p",
+    "markers": "EB",
+    "color": 8
+  },
+  {
+    "row": 47,
+    "task": "E",
+    "clean_task": "Jordfelsbrytare",
+    "markers": "E",
+    "color": 8
+  },
+  {
+    "row": 48,
+    "task": "E",
+    "clean_task": "Avst\u00e5nd mellan elsk\u00e5p till badrummet",
+    "markers": "E",
+    "color": 8
+  },
+  {
+    "row": 49,
+    "task": "E",
+    "clean_task": "Avst\u00e5ndet mellan n\u00e4rmaste kopplingsdosa till badrummet",
+    "markers": "E",
+    "color": 8
+  },
+  {
+    "row": 51,
+    "task": "OEB",
+    "clean_task": "Taklampa/takdosa",
+    "markers": "OEB",
+    "color": 6
+  },
+  {
+    "row": 52,
+    "task": "OEB",
+    "clean_task": "V\u00e4gguttag",
+    "markers": "OEB",
+    "color": 6
+  },
+  {
+    "row": 53,
+    "task": "OEB",
+    "clean_task": "El handdukstork",
+    "markers": "OEB",
+    "color": 6
+  },
+  {
+    "row": 54,
+    "task": "OEB",
+    "clean_task": "El-golvv\u00e4rme",
+    "markers": "OEB",
+    "color": 6
+  },
+  {
+    "row": 55,
+    "task": "OEVB",
+    "clean_task": "Tv\u00e4ttmaskin",
+    "markers": "OEVB",
+    "color": 6
+  },
+  {
+    "row": 56,
+    "task": "OEB",
+    "clean_task": "Torktumlare",
+    "markers": "OEB",
+    "color": 6
+  },
+  {
+    "row": 57,
+    "task": "OEB",
+    "clean_task": "El i tv\u00e4ttst\u00e4ll/kommod",
+    "markers": "OEB",
+    "color": 6
+  },
+  {
+    "row": 58,
+    "task": "OEB",
+    "clean_task": "Extra uttag f\u00f6r strykj\u00e4rn",
+    "markers": "OEB",
+    "color": 6
+  },
+  {
+    "row": 59,
+    "task": "OEB",
+    "clean_task": "Spotlights (antal)",
+    "markers": "OEB",
+    "color": 6
+  },
+  {
+    "row": 60,
+    "task": "OEB",
+    "clean_task": "Taks\u00e4nkning",
+    "markers": "OEB",
+    "color": 6
+  },
+  {
+    "row": 63,
+    "task": "OB",
+    "clean_task": "Inbyggd spegel i v\u00e4ggen",
+    "markers": "OB",
+    "color": 6
+  },
+  {
+    "row": 64,
+    "task": "OE",
+    "clean_task": "Spegel med belysning",
+    "markers": "OE",
+    "color": 6
+  },
+  {
+    "row": 65,
+    "task": "OE",
+    "clean_task": "Spegelsk\u00e5p med belysning och uttag",
+    "markers": "OE",
+    "color": 6
+  },
+  {
+    "row": 66,
+    "task": "OVB",
+    "clean_task": "Tv\u00e4ttst\u00e4ll med kommod",
+    "markers": "OVB",
+    "color": 6
+  },
+  {
+    "row": 67,
+    "task": "OVB",
+    "clean_task": "Duschblandare med handdusch",
+    "markers": "OVB",
+    "color": 6
+  },
+  {
+    "row": 68,
+    "task": "OVB",
+    "clean_task": "Duschblandare med tak- och handdusch",
+    "markers": "OVB",
+    "color": 6
+  },
+  {
+    "row": 69,
+    "task": "OB",
+    "clean_task": "S\u00e4tta upp en v\u00e4gg som duschv\u00e4gg",
+    "markers": "OB",
+    "color": 6
+  },
+  {
+    "row": 70,
+    "task": "OB",
+    "clean_task": "S\u00e4tta upp en fast duschv\u00e4gg av glasblock",
+    "markers": "OB",
+    "color": 6
+  },
+  {
+    "row": 71,
+    "task": "OB",
+    "clean_task": "Montering av en glas-duschv\u00e4gg",
+    "markers": "OB",
+    "color": 6
+  },
+  {
+    "row": 72,
+    "task": "OB",
+    "clean_task": "Montering av duschd\u00f6rrar",
+    "markers": "OB",
+    "color": 6
+  },
+  {
+    "row": 73,
+    "task": "OVB",
+    "clean_task": "Golvbrunnen i duschen",
+    "markers": "OVB",
+    "color": 5
+  },
+  {
+    "row": 74,
+    "task": "OBV",
+    "clean_task": "Badkar",
+    "markers": "OVB",
+    "color": 5
+  },
+  {
+    "row": 75,
+    "task": "OBV",
+    "clean_task": "Toalett",
+    "markers": "OVB",
+    "color": 5
+  },
+  {
+    "row": 76,
+    "task": "OB",
+    "clean_task": "Silikondragning, applicering",
+    "markers": "OB",
+    "color": 8
+  },
+  {
+    "row": 77,
+    "task": "OB",
+    "clean_task": "Byte av d\u00f6rrfoder inv\u00e4ndingt",
+    "markers": "OB",
+    "color": 8
+  },
+  {
+    "row": 78,
+    "task": "OB",
+    "clean_task": "Byte av d\u00f6rrfoder utv\u00e4ndigt",
+    "markers": "OB",
+    "color": 8
+  },
+  {
+    "row": 79,
+    "task": "OB",
+    "clean_task": "Byte av d\u00f6rrkarm",
+    "markers": "OB",
+    "color": 8
+  },
+  {
+    "row": 80,
+    "task": "OB",
+    "clean_task": "Byte av d\u00f6rrblad",
+    "markers": "OB",
+    "color": 8
+  },
+  {
+    "row": 81,
+    "task": "OB",
+    "clean_task": "Byte / uppfr\u00e4schning av tr\u00f6skel",
+    "markers": "OB",
+    "color": 8
+  },
+  {
+    "row": 82,
+    "task": "OB",
+    "clean_task": "F\u00f6nster omm\u00e5lning",
+    "markers": "OB",
+    "color": 8
+  },
+  {
+    "row": 83,
+    "task": "OVB",
+    "clean_task": "Dolda r\u00f6rdragningar",
+    "markers": "OVB",
+    "color": 8
+  },
+  {
+    "row": 84,
+    "task": "OVB",
+    "clean_task": "Utanp\u00e5liggande r\u00f6rdragningar",
+    "markers": "OVB",
+    "color": 8
+  },
+  {
+    "row": 85,
+    "task": "OVB",
+    "clean_task": "Dold takdusch",
+    "markers": "OVB",
+    "color": 8
+  },
+  {
+    "row": 86,
+    "task": "OVB",
+    "clean_task": "Antal dolda blandare",
+    "markers": "OVB",
+    "color": 8
+  },
+  {
+    "row": 87,
+    "task": "OVB",
+    "clean_task": "R\u00e4ddning av befintlig vattenburen golvv\u00e4rme",
+    "markers": "OVB",
+    "color": 8
+  },
+  {
+    "row": 88,
+    "task": "OVB",
+    "clean_task": "L\u00e4ggning av ny vattenburen golvv\u00e4rme",
+    "markers": "OVB",
+    "color": 8
+  },
+  {
+    "row": 89,
+    "task": "OB",
+    "clean_task": "Platts\u00e4ttning upp till tak",
+    "markers": "OB",
+    "color": 8
+  },
+  {
+    "row": 90,
+    "task": "OB",
+    "clean_task": "H\u00f6jd p\u00e5 platts\u00e4ttning p\u00e5 v\u00e4ggar",
+    "markers": "OB",
+    "color": 8
+  },
+  {
+    "row": 91,
+    "task": "OB",
+    "clean_task": "Nischar utan spotlight",
+    "markers": "OB",
+    "color": 8
+  },
+  {
+    "row": 92,
+    "task": "OEB",
+    "clean_task": "Nischar med spotlight",
+    "markers": "OEB",
+    "color": 8
+  },
+  {
+    "row": 93,
+    "task": "B",
+    "clean_task": "Storlek golvplattor (10*10 till 20*20)",
+    "markers": "B",
+    "color": 6
+  },
+  {
+    "row": 94,
+    "task": "O",
+    "clean_task": "Avvikelse i storlek f\u00f6r golvplattor ",
+    "markers": "O",
+    "color": 8
+  },
+  {
+    "row": 95,
+    "task": "B",
+    "clean_task": "V\u00e4ggplattor (15*15 till 60*60)",
+    "markers": "B",
+    "color": 6
+  },
+  {
+    "row": 96,
+    "task": "O",
+    "clean_task": "Avvikelse i storlek f\u00f6r v\u00e4ggplattor",
+    "markers": "O",
+    "color": 8
+  },
+  {
+    "row": 97,
+    "task": "B",
+    "clean_task": "Antal f\u00e4rger fog",
+    "markers": "B",
+    "color": 8
+  },
+  {
+    "row": 99,
+    "task": "OB",
+    "clean_task": "M\u00e5lning av tak",
+    "markers": "OB",
+    "color": 8
+  },
+  {
+    "row": 100,
+    "task": "O",
+    "clean_task": "Arbetstid m\u00e5lning av okaklade v\u00e4ggar",
+    "markers": "O",
+    "color": 8
+  },
+  {
+    "row": 101,
+    "task": "OB",
+    "clean_task": "M\u00e5lning av okaklade v\u00e4ggar",
+    "markers": "OB",
+    "color": 8
+  },
+  {
+    "row": 102,
+    "task": "OB",
+    "clean_task": "Avetablering och grovst\u00e4dning",
+    "markers": "OB",
+    "color": 8
+  }
+]

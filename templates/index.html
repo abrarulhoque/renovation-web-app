@@ -1,0 +1,1196 @@
+{% extends "base.html" %} {% block title %}Bathroom Renovation Quote Form{%
+endblock %} {% block content %}
+<div class="row">
+  <div class="col-12">
+    <h1 class="mb-4">
+      Bathroom Renovation Quote Form / Badrumsrenovering Offertformulär
+    </h1>
+    <form
+      method="POST"
+      enctype="multipart/form-data"
+      class="needs-validation"
+      novalidate
+      action="{{ url_for('index') }}"
+    >
+      {{ form.csrf_token }}
+      <!-- Form sections -->
+      <div class="accordion" id="quoteForm">
+        <!-- Personal Details -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="personalDetailsHeader">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#personalDetailsCollapse"
+            >
+              <span class="material-icons me-2">person</span>
+              1. Personal Details / Personuppgifter
+            </button>
+          </h2>
+          <div
+            id="personalDetailsCollapse"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#quoteForm"
+          >
+            <div class="accordion-body">
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  {{ form.personal_details.first_name.label(class="form-label") }}
+                  {{ form.personal_details.first_name(class="form-control") }}
+                </div>
+                <div class="col-md-6 mb-3">
+                  {{ form.personal_details.last_name.label(class="form-label") }}
+                  {{ form.personal_details.last_name(class="form-control") }}
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  {{ form.personal_details.phone.label(class="form-label") }}
+                  {{ form.personal_details.phone(class="form-control") }}
+                </div>
+                <div class="col-md-6 mb-3">
+                  {{ form.personal_details.email.label(class="form-label") }}
+                  {{ form.personal_details.email(class="form-control") }}
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  {{ form.personal_details.address.label(class="form-label") }}
+                  {{ form.personal_details.address(class="form-control") }}
+                </div>
+                <div class="col-md-6 mb-3">
+                  {{ form.personal_details.door_code.label(class="form-label") }}
+                  {{ form.personal_details.door_code(class="form-control") }}
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">{{
+                  form.personal_details.dwelling_type.label
+                }}</label>
+                <div class="btn-group" role="group">
+                  {% for subfield in form.personal_details.dwelling_type %}
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="{{ form.personal_details.dwelling_type.name }}"
+                    id="{{ subfield.id }}"
+                    value="{{ subfield.data }}"
+                    autocomplete="off"
+                  />
+                  <label
+                    class="btn btn-outline-primary"
+                    for="{{ subfield.id }}"
+                  >
+                    {{ subfield.label }}
+                  </label>
+                  {% endfor %}
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  {{ form.personal_details.season.label(class="form-label") }}
+                  {{ form.personal_details.season(class="form-select") }}
+                </div>
+                <div class="col-md-6 mb-3">
+                  {{ form.personal_details.floor_count.label(class="form-label") }}
+                  {{ form.personal_details.floor_count(class="form-control", type="number", min=1) }}
+                </div>
+              </div>
+              <!-- Building Access Section -->
+              <h4 class="mt-4">Building Access / Tillgänglighet</h4>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  {{ form.personal_details.has_elevator.label(class="form-label") }}
+                  {{ form.personal_details.has_elevator(class="form-select") }}
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="form-check form-switch">
+                    {{ form.personal_details.good_stairwell_access(class="form-check-input") }}
+                    {{ form.personal_details.good_stairwell_access.label(class="form-check-label") }}
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <div class="form-check form-switch">
+                    {{ form.personal_details.indoor_workspace(class="form-check-input") }}
+                    {{ form.personal_details.indoor_workspace.label(class="form-check-label") }}
+                  </div>
+                </div>
+              </div>
+
+              <!-- Parking and Transportation Section -->
+              <h4 class="mt-4">
+                Parking and Transportation / Parkering och Transport
+              </h4>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  {{ form.personal_details.parking_distance.label(class="form-label") }}
+                  {{ form.personal_details.parking_distance(class="form-control") }}
+                </div>
+                <div class="col-md-6 mb-3">
+                  {{ form.personal_details.transport_possibility.label(class="form-label") }}
+                  {{ form.personal_details.transport_possibility(class="form-select") }}
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 mb-3">
+                  {{ form.personal_details.parking_fee.label(class="form-label") }}
+                  {{ form.personal_details.parking_fee(class="form-control", type="number", step="0.01") }}
+                </div>
+                <div class="col-md-4 mb-3">
+                  {{ form.personal_details.service_car_price.label(class="form-label") }}
+                  {{ form.personal_details.service_car_price(class="form-control", type="number", step="0.01") }}
+                </div>
+                <div class="col-md-4 mb-3">
+                  {{ form.personal_details.service_car_days.label(class="form-label") }}
+                  {{ form.personal_details.service_car_days(class="form-control", type="number", min="0") }}
+                </div>
+                <div class="col-md-4 mb-3">
+                  {{ form.personal_details.congestion_charge.label(class="form-label") }}
+                  {{ form.personal_details.congestion_charge(class="form-control", type="number", step="0.01") }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bathroom Details -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="bathroomDetailsHeader">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#bathroomDetailsCollapse"
+            >
+              <span class="material-icons me-2">bathroom</span>
+              2. Bathroom Details / Badrumsdetaljer
+            </button>
+          </h2>
+          <div
+            id="bathroomDetailsCollapse"
+            class="accordion-collapse collapse"
+            data-bs-parent="#quoteForm"
+          >
+            <div class="accordion-body">
+              <div class="row">
+                <div class="col-md-4 mb-3">
+                  {{ form.bathroom_details.width.label(class="form-label") }}
+                  {{ form.bathroom_details.width(class="form-control", type="number", step="0.1") }}
+                </div>
+                <div class="col-md-4 mb-3">
+                  {{ form.bathroom_details.length.label(class="form-label") }}
+                  {{ form.bathroom_details.length(class="form-control", type="number", step="0.1") }}
+                </div>
+                <div class="col-md-4 mb-3">
+                  {{ form.bathroom_details.height.label(class="form-label") }}
+                  {{ form.bathroom_details.height(class="form-control", type="number", step="0.1") }}
+                </div>
+              </div>
+              <div class="mb-3">
+                {{ form.bathroom_details.floor_area.label(class="form-label") }}
+                {{ form.bathroom_details.floor_area(class="form-control", type="number", step="0.01") }}
+              </div>
+              <div class="mb-3">
+                <div class="form-check form-switch">
+                  {{ form.bathroom_details.has_sketch(class="form-check-input") }}
+                  {{ form.bathroom_details.has_sketch.label(class="form-check-label") }}
+                </div>
+                <div class="mt-2" id="sketchUpload" style="display: none">
+                  {{ form.bathroom_details.sketch_file.label(class="form-label") }}
+                  {{ form.bathroom_details.sketch_file(class="form-control") }}
+
+                  <div class="mt-2">
+                    <label class="form-label"
+                      >Additional Sketches / Ytterligare skisser</label
+                    >
+                    <div id="additional-sketches-container">
+                      {% for sketch_field in form.bathroom_details.sketch_files
+                      %}
+                      <div class="mb-2 additional-sketch-row">
+                        {{ sketch_field(class="form-control") }}
+                      </div>
+                      {% endfor %}
+                    </div>
+                    <button
+                      type="button"
+                      id="add-sketch"
+                      class="btn btn-outline-primary btn-sm mt-1"
+                    >
+                      <span class="material-icons">add</span> Add More Sketches
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <div class="form-check form-switch">
+                  {{ form.bathroom_details.existing_placements(class="form-check-input") }}
+                  {{ form.bathroom_details.existing_placements.label(class="form-check-label") }}
+                </div>
+              </div>
+
+              <!-- Relocation Details -->
+              <h5 class="mt-4">Relocation Details / Omplaceringsdetaljer</h5>
+              <div class="row">
+                <div class="col-md-12 mb-3">
+                  {{ form.bathroom_details.relocation_count.label(class="form-label") }}
+                  {{ form.bathroom_details.relocation_count(class="form-select") }}
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    {{ form.bathroom_details.toilet_relocation.label(class="form-label") }}
+                    {{ form.bathroom_details.toilet_relocation(class="form-control", type="number") }}
+                  </div>
+                  <div class="mb-3">
+                    {{ form.bathroom_details.sink_relocation.label(class="form-label") }}
+                    {{ form.bathroom_details.sink_relocation(class="form-control", type="number") }}
+                  </div>
+                  <div class="mb-3">
+                    {{ form.bathroom_details.shower_relocation.label(class="form-label") }}
+                    {{ form.bathroom_details.shower_relocation(class="form-control", type="number") }}
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    {{ form.bathroom_details.bathtub_relocation.label(class="form-label") }}
+                    {{ form.bathroom_details.bathtub_relocation(class="form-control", type="number") }}
+                  </div>
+                  <div class="mb-3">
+                    {{ form.bathroom_details.towel_warmer_relocation.label(class="form-label") }}
+                    {{ form.bathroom_details.towel_warmer_relocation(class="form-control", type="number") }}
+                  </div>
+                </div>
+              </div>
+              <!-- Add more bathroom details fields here -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Appliances -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="appliancesHeader">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#appliancesCollapse"
+            >
+              <span class="material-icons me-2">electrical_services</span>
+              3. Appliances / Apparater
+            </button>
+          </h2>
+          <div
+            id="appliancesCollapse"
+            class="accordion-collapse collapse"
+            data-bs-parent="#quoteForm"
+          >
+            <div class="accordion-body">
+              <h4 class="mb-3">
+                Behövs följande apparater / Required Appliances
+              </h4>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-check form-switch mb-3">
+                    {{ form.appliances.ceiling_lamp(class="form-check-input") }}
+                    {{ form.appliances.ceiling_lamp.label(class="form-check-label") }}
+                  </div>
+                  <div class="form-check form-switch mb-3">
+                    {{ form.appliances.wall_socket(class="form-check-input") }}
+                    {{ form.appliances.wall_socket.label(class="form-check-label") }}
+                  </div>
+                  <div class="form-check form-switch mb-3">
+                    {{ form.appliances.electric_towel_warmer(class="form-check-input") }}
+                    {{ form.appliances.electric_towel_warmer.label(class="form-check-label") }}
+                  </div>
+                  <div class="form-check form-switch mb-3">
+                    {{ form.appliances.floor_heating(class="form-check-input") }}
+                    {{ form.appliances.floor_heating.label(class="form-check-label") }}
+                  </div>
+                  <div class="form-check form-switch mb-3">
+                    {{ form.appliances.washing_machine(class="form-check-input") }}
+                    {{ form.appliances.washing_machine.label(class="form-check-label") }}
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-check form-switch mb-3">
+                    {{ form.appliances.dryer(class="form-check-input") }}
+                    {{ form.appliances.dryer.label(class="form-check-label") }}
+                  </div>
+                  <div class="form-check form-switch mb-3">
+                    {{ form.appliances.sink_outlet(class="form-check-input") }}
+                    {{ form.appliances.sink_outlet.label(class="form-check-label") }}
+                  </div>
+                  <div class="form-check form-switch mb-3">
+                    {{ form.appliances.iron_outlet(class="form-check-input") }}
+                    {{ form.appliances.iron_outlet.label(class="form-check-label") }}
+                  </div>
+                  <div class="form-check form-switch mb-3">
+                    {{ form.appliances.ceiling_lowering(class="form-check-input") }}
+                    {{ form.appliances.ceiling_lowering.label(class="form-check-label") }}
+                  </div>
+                  <div class="mb-3">
+                    {{ form.appliances.spotlights_count.label(class="form-label") }}
+                    {{ form.appliances.spotlights_count(class="form-control", type="number", min=0) }}
+                  </div>
+                </div>
+              </div>
+
+              <!-- Additional Building Access Fields -->
+              <h5 class="mt-4">
+                Building Access Details / Tillgänglighetsdetaljer
+              </h5>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-check form-switch mb-3">
+                    {{ form.appliances.good_stairwell(class="form-check-input") }}
+                    {{ form.appliances.good_stairwell.label(class="form-check-label") }}
+                  </div>
+                  <div class="form-check form-switch mb-3">
+                    {{ form.appliances.etablering(class="form-check-input") }}
+                    {{ form.appliances.etablering.label(class="form-check-label") }}
+                  </div>
+                  <div class="form-check form-switch mb-3">
+                    {{ form.appliances.flytspackling(class="form-check-input") }}
+                    {{ form.appliances.flytspackling.label(class="form-check-label") }}
+                  </div>
+                  <div class="mb-3">
+                    {{ form.appliances.workspace_distance_if_no.label(class="form-label") }}
+                    {{ form.appliances.workspace_distance_if_no(class="form-control", type="number", step="0.1") }}
+                  </div>
+                  <div class="mb-3">
+                    {{ form.appliances.workspace_distance_from_entry.label(class="form-label") }}
+                    {{ form.appliances.workspace_distance_from_entry(class="form-control", type="number", step="0.1") }}
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    {{ form.appliances.floor_covering_time.label(class="form-label") }}
+                    {{ form.appliances.floor_covering_time(class="form-control", type="number") }}
+                  </div>
+                  <div class="mb-3">
+                    {{ form.appliances.floor_covering_material.label(class="form-label") }}
+                    {{ form.appliances.floor_covering_material(class="form-control") }}
+                  </div>
+                </div>
+              </div>
+
+              <!-- Floor Drain Details -->
+              <h5 class="mt-4">Floor Drain Details / Golvbrunnsdetaljer</h5>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    {{ form.appliances.floor_drain_count.label(class="form-label") }}
+                    {{ form.appliances.floor_drain_count(class="form-control", type="number", min=0) }}
+                  </div>
+                  <div class="mb-3">
+                    {{ form.appliances.floor_drain_relocation.label(class="form-label") }}
+                    {{ form.appliances.floor_drain_relocation(class="form-select") }}
+                  </div>
+                  <div class="form-check form-switch mb-3">
+                    {{ form.appliances.additional_floor_drain(class="form-check-input") }}
+                    {{ form.appliances.additional_floor_drain.label(class="form-check-label") }}
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-check form-switch mb-3">
+                    {{ form.appliances.marking_floors_walls(class="form-check-input") }}
+                    {{ form.appliances.marking_floors_walls.label(class="form-check-label") }}
+                  </div>
+                  <div class="mb-3">
+                    {{ form.appliances.floor_penetrations.label(class="form-label") }}
+                    {{ form.appliances.floor_penetrations(class="form-select") }}
+                  </div>
+                  <div class="mb-3">
+                    {{ form.appliances.wall_penetrations_relocation.label(class="form-label") }}
+                    {{ form.appliances.wall_penetrations_relocation(class="form-select") }}
+                  </div>
+                  <div class="form-check form-switch mb-3">
+                    {{ form.appliances.drain_pipes_replacement(class="form-check-input") }}
+                    {{ form.appliances.drain_pipes_replacement.label(class="form-check-label") }}
+                  </div>
+                </div>
+              </div>
+
+              <!-- Electrical and Water Details -->
+              <h5 class="mt-4">
+                Electrical and Water Details / El- och vattendetaljer
+              </h5>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    {{ form.appliances.water_shutoff.label(class="form-label") }}
+                    {{ form.appliances.water_shutoff(class="form-select") }}
+                  </div>
+                  <div class="mb-3">
+                    {{ form.appliances.fuse_box.label(class="form-label") }}
+                    {{ form.appliances.fuse_box(class="form-select") }}
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-check form-switch mb-3">
+                    {{ form.appliances.rcd(class="form-check-input") }}
+                    {{ form.appliances.rcd.label(class="form-check-label") }}
+                  </div>
+                  <div class="mb-3">
+                    {{ form.appliances.fusebox_distance.label(class="form-label") }}
+                    {{ form.appliances.fusebox_distance(class="form-select") }}
+                  </div>
+                  <div class="mb-3">
+                    {{ form.appliances.junction_box_distance.label(class="form-label") }}
+                    {{ form.appliances.junction_box_distance(class="form-select") }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interior Fittings -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="interiorFittingsHeader">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#interiorFittingsCollapse"
+            >
+              <span class="material-icons me-2">chair</span>
+              4. Interior Fittings / Inredning
+            </button>
+          </h2>
+          <div
+            id="interiorFittingsCollapse"
+            class="accordion-collapse collapse"
+            data-bs-parent="#quoteForm"
+          >
+            <div class="accordion-body">
+              <!-- Mirror and Cabinet Section -->
+              <h5>Mirrors and Cabinets / Speglar och Skåp</h5>
+              <div class="row mb-4">
+                <div class="col-md-6">
+                  <div class="form-check form-switch mb-3">
+                    {{ form.interior_fittings.built_in_mirror(class="form-check-input") }}
+                    {{ form.interior_fittings.built_in_mirror.label(class="form-check-label") }}
+                  </div>
+                  <div class="form-check form-switch mb-3">
+                    {{ form.interior_fittings.mirror_lighting(class="form-check-input") }}
+                    {{ form.interior_fittings.mirror_lighting.label(class="form-check-label") }}
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-check form-switch mb-3">
+                    {{ form.interior_fittings.mirror_cabinet(class="form-check-input") }}
+                    {{ form.interior_fittings.mirror_cabinet.label(class="form-check-label") }}
+                  </div>
+                  <div class="form-check form-switch mb-3">
+                    {{ form.interior_fittings.vanity_unit(class="form-check-input") }}
+                    {{ form.interior_fittings.vanity_unit.label(class="form-check-label") }}
+                  </div>
+                </div>
+              </div>
+
+              <!-- Shower Section -->
+              <h5>Shower and Bath / Dusch och Bad</h5>
+              <div class="row mb-4">
+                <div class="col-md-6">
+                  <div class="form-check form-switch mb-3">
+                    {{ form.interior_fittings.shower_mixer(class="form-check-input") }}
+                    {{ form.interior_fittings.shower_mixer.label(class="form-check-label") }}
+                  </div>
+                  <div class="form-check form-switch mb-3">
+                    {{ form.interior_fittings.shower_corner(class="form-check-input") }}
+                    {{ form.interior_fittings.shower_corner.label(class="form-check-label") }}
+                  </div>
+                  <div class="form-check form-switch mb-3">
+                    {{ form.interior_fittings.shower_wall(class="form-check-input") }}
+                    {{ form.interior_fittings.shower_wall.label(class="form-check-label") }}
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-check form-switch mb-3">
+                    {{ form.interior_fittings.glass_block_wall(class="form-check-input") }}
+                    {{ form.interior_fittings.glass_block_wall.label(class="form-check-label") }}
+                  </div>
+                  <div class="form-check form-switch mb-3">
+                    {{ form.interior_fittings.glass_shower_wall(class="form-check-input") }}
+                    {{ form.interior_fittings.glass_shower_wall.label(class="form-check-label") }}
+                  </div>
+                  <div class="form-check form-switch mb-3">
+                    {{ form.interior_fittings.shower_doors(class="form-check-input") }}
+                    {{ form.interior_fittings.shower_doors.label(class="form-check-label") }}
+                  </div>
+                </div>
+              </div>
+
+              <!-- Bathtub and Toilet Section -->
+              <h5>Bathtub and Toilet / Badkar och Toalett</h5>
+              <div class="row mb-4">
+                <div class="col-md-6">
+                  <h6>Badkar / Bathtub</h6>
+                  <div class="form-check form-switch mb-2">
+                    {{ form.interior_fittings.bathtub_normal(class="form-check-input") }}
+                    {{ form.interior_fittings.bathtub_normal.label(class="form-check-label") }}
+                  </div>
+                  <div class="form-check form-switch mb-2">
+                    {{ form.interior_fittings.bathtub_long(class="form-check-input") }}
+                    {{ form.interior_fittings.bathtub_long.label(class="form-check-label") }}
+                  </div>
+                  <div class="form-check form-switch mb-2">
+                    {{ form.interior_fittings.bathtub_freestanding(class="form-check-input") }}
+                    {{ form.interior_fittings.bathtub_freestanding.label(class="form-check-label") }}
+                  </div>
+                  <div class="form-check form-switch mb-2">
+                    {{ form.interior_fittings.bathtub_built_in(class="form-check-input") }}
+                    {{ form.interior_fittings.bathtub_built_in.label(class="form-check-label") }}
+                  </div>
+                  <div class="form-check form-switch mb-2">
+                    {{ form.interior_fittings.bathtub_wall(class="form-check-input") }}
+                    {{ form.interior_fittings.bathtub_wall.label(class="form-check-label") }}
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <h6>Toalett / Toilet</h6>
+                  <div class="form-check form-switch mb-2">
+                    {{ form.interior_fittings.toilet_freestanding(class="form-check-input") }}
+                    {{ form.interior_fittings.toilet_freestanding.label(class="form-check-label") }}
+                  </div>
+                  <div class="form-check form-switch mb-2">
+                    {{ form.interior_fittings.toilet_wall_mounted(class="form-check-input") }}
+                    {{ form.interior_fittings.toilet_wall_mounted.label(class="form-check-label") }}
+                  </div>
+                </div>
+              </div>
+
+              <!-- Shower Drain Type -->
+              <div class="row mb-4">
+                <div class="col-md-6">
+                  {{ form.interior_fittings.shower_drain.label(class="form-label") }}
+                  {{ form.interior_fittings.shower_drain(class="form-select") }}
+                </div>
+              </div>
+
+              <!-- Additional Interior Fittings -->
+              <h5>Additional Interior Fittings / Ytterligare inredning</h5>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-check form-switch mb-2">
+                    {{ form.interior_fittings.silicon_application(class="form-check-input") }}
+                    {{ form.interior_fittings.silicon_application.label(class="form-check-label") }}
+                  </div>
+                  <div class="form-check form-switch mb-2">
+                    {{ form.interior_fittings.interior_door_casing(class="form-check-input") }}
+                    {{ form.interior_fittings.interior_door_casing.label(class="form-check-label") }}
+                  </div>
+                  <div class="form-check form-switch mb-2">
+                    {{ form.interior_fittings.exterior_door_casing(class="form-check-input") }}
+                    {{ form.interior_fittings.exterior_door_casing.label(class="form-check-label") }}
+                  </div>
+                  <div class="form-check form-switch mb-2">
+                    {{ form.interior_fittings.doorframe_replacement(class="form-check-input") }}
+                    {{ form.interior_fittings.doorframe_replacement.label(class="form-check-label") }}
+                  </div>
+                  <div class="form-check form-switch mb-2">
+                    {{ form.interior_fittings.door_replacement(class="form-check-input") }}
+                    {{ form.interior_fittings.door_replacement.label(class="form-check-label") }}
+                  </div>
+                  <div class="form-check form-switch mb-2">
+                    {{ form.interior_fittings.threshold_replacement(class="form-check-input") }}
+                    {{ form.interior_fittings.threshold_replacement.label(class="form-check-label") }}
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-check form-switch mb-2">
+                    {{ form.interior_fittings.window_repainting(class="form-check-input") }}
+                    {{ form.interior_fittings.window_repainting.label(class="form-check-label") }}
+                  </div>
+                  <div class="form-check form-switch mb-2">
+                    {{ form.interior_fittings.hidden_pipelines(class="form-check-input") }}
+                    {{ form.interior_fittings.hidden_pipelines.label(class="form-check-label") }}
+                  </div>
+                  <div class="form-check form-switch mb-2">
+                    {{ form.interior_fittings.shown_pipelines(class="form-check-input") }}
+                    {{ form.interior_fittings.shown_pipelines.label(class="form-check-label") }}
+                  </div>
+                  <div class="form-check form-switch mb-2">
+                    {{ form.interior_fittings.hidden_ceiling_shower(class="form-check-input") }}
+                    {{ form.interior_fittings.hidden_ceiling_shower.label(class="form-check-label") }}
+                  </div>
+                  <div class="form-check form-switch mb-2">
+                    {{ form.interior_fittings.save_waterheated_floor(class="form-check-input") }}
+                    {{ form.interior_fittings.save_waterheated_floor.label(class="form-check-label") }}
+                  </div>
+                  <div class="form-check form-switch mb-2">
+                    {{ form.interior_fittings.new_waterheated_floor(class="form-check-input") }}
+                    {{ form.interior_fittings.new_waterheated_floor.label(class="form-check-label") }}
+                  </div>
+                </div>
+              </div>
+
+              <!-- Wall Tiling and Niches -->
+              <div class="row mt-3">
+                <div class="col-md-6 mb-3">
+                  {{ form.interior_fittings.wall_tiling_height.label(class="form-label") }}
+                  {{ form.interior_fittings.wall_tiling_height(class="form-control", type="number") }}
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="form-check form-switch">
+                    {{ form.interior_fittings.dismantling_cleaning(class="form-check-input") }}
+                    {{ form.interior_fittings.dismantling_cleaning.label(class="form-check-label") }}
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  {{ form.interior_fittings.concealed_mixers_count.label(class="form-label") }}
+                  {{ form.interior_fittings.concealed_mixers_count(class="form-control", type="number", min=0) }}
+                </div>
+                <div class="col-md-6 mb-3">
+                  {{ form.interior_fittings.concealed_mixers_price.label(class="form-label") }}
+                  {{ form.interior_fittings.concealed_mixers_price(class="form-control", type="number", step="0.01") }}
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  {{ form.interior_fittings.niches_count.label(class="form-label") }}
+                  {{ form.interior_fittings.niches_count(class="form-control", type="number", min=0) }}
+                </div>
+                <div class="col-md-6 mb-3">
+                  {{ form.interior_fittings.niches_price.label(class="form-label") }}
+                  {{ form.interior_fittings.niches_price(class="form-control", type="number", step="0.01") }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tiles and Painting -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="tilesHeader">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#tilesCollapse"
+            >
+              <span class="material-icons me-2">format_paint</span>
+              5. Tiles and Painting / Kakel och Målning
+            </button>
+          </h2>
+          <div
+            id="tilesCollapse"
+            class="accordion-collapse collapse"
+            data-bs-parent="#quoteForm"
+          >
+            <div class="accordion-body">
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  {{ form.tiles_and_painting.floor_tile_size.label(class="form-label") }}
+                  {{ form.tiles_and_painting.floor_tile_size(class="form-control") }}
+                </div>
+                <div class="col-md-6 mb-3">
+                  {{ form.tiles_and_painting.floor_tile_deviation.label(class="form-label") }}
+                  {{ form.tiles_and_painting.floor_tile_deviation(class="form-control") }}
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  {{ form.tiles_and_painting.wall_tile_size.label(class="form-label") }}
+                  {{ form.tiles_and_painting.wall_tile_size(class="form-control") }}
+                </div>
+                <div class="col-md-6 mb-3">
+                  {{ form.tiles_and_painting.wall_tile_deviation.label(class="form-label") }}
+                  {{ form.tiles_and_painting.wall_tile_deviation(class="form-control") }}
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  {{ form.tiles_and_painting.grout_colors.label(class="form-label") }}
+                  {{ form.tiles_and_painting.grout_colors(class="form-control", type="number", min=0) }}
+                </div>
+                <div class="col-md-6 mb-3">
+                  {{ form.tiles_and_painting.grout_colors_price.label(class="form-label") }}
+                  {{ form.tiles_and_painting.grout_colors_price(class="form-control", type="number", step="0.01") }}
+                </div>
+              </div>
+
+              <!-- Ceiling Painting -->
+              <h5>Ceiling Painting / Takmålning</h5>
+              <div class="row">
+                <div class="col-md-4 mb-3">
+                  <div class="form-check form-switch">
+                    {{ form.tiles_and_painting.paint_ceiling(class="form-check-input") }}
+                    {{ form.tiles_and_painting.paint_ceiling.label(class="form-check-label") }}
+                  </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                  {{ form.tiles_and_painting.ceiling_area.label(class="form-label") }}
+                  {{ form.tiles_and_painting.ceiling_area(class="form-control", type="number", step="0.01") }}
+                </div>
+                <div class="col-md-4 mb-3">
+                  {{ form.tiles_and_painting.ceiling_area_price.label(class="form-label") }}
+                  {{ form.tiles_and_painting.ceiling_area_price(class="form-control", type="number", step="0.01") }}
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  {{ form.tiles_and_painting.ceiling_painting_hours.label(class="form-label") }}
+                  {{ form.tiles_and_painting.ceiling_painting_hours(class="form-control", type="number", step="0.5") }}
+                </div>
+                <div class="col-md-6 mb-3">
+                  {{ form.tiles_and_painting.ceiling_painting_price.label(class="form-label") }}
+                  {{ form.tiles_and_painting.ceiling_painting_price(class="form-control", type="number", step="0.01") }}
+                </div>
+              </div>
+
+              <!-- Wall Painting -->
+              <h5>Wall Painting / Väggmålning</h5>
+              <div class="row">
+                <div class="col-md-4 mb-3">
+                  <div class="form-check form-switch">
+                    {{ form.tiles_and_painting.paint_walls(class="form-check-input") }}
+                    {{ form.tiles_and_painting.paint_walls.label(class="form-check-label") }}
+                  </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                  {{ form.tiles_and_painting.wall_area.label(class="form-label") }}
+                  {{ form.tiles_and_painting.wall_area(class="form-control", type="number", step="0.01") }}
+                </div>
+                <div class="col-md-4 mb-3">
+                  {{ form.tiles_and_painting.wall_area_price.label(class="form-label") }}
+                  {{ form.tiles_and_painting.wall_area_price(class="form-control", type="number", step="0.01") }}
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  {{ form.tiles_and_painting.wall_painting_hours.label(class="form-label") }}
+                  {{ form.tiles_and_painting.wall_painting_hours(class="form-control", type="number", step="0.5") }}
+                </div>
+                <div class="col-md-6 mb-3">
+                  {{ form.tiles_and_painting.wall_painting_price.label(class="form-label") }}
+                  {{ form.tiles_and_painting.wall_painting_price(class="form-control", type="number", step="0.01") }}
+                </div>
+              </div>
+
+              <!-- Cleanup -->
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <div class="form-check form-switch">
+                    {{ form.tiles_and_painting.cleanup(class="form-check-input") }}
+                    {{ form.tiles_and_painting.cleanup.label(class="form-check-label") }}
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  {{ form.tiles_and_painting.construction_bag.label(class="form-label") }}
+                  {{ form.tiles_and_painting.construction_bag(class="form-control", type="number", min=0) }}
+                </div>
+              </div>
+
+              <!-- Project Notes -->
+              <div class="mb-3">
+                {{ form.tiles_and_painting.project_notes.label(class="form-label") }}
+                {{ form.tiles_and_painting.project_notes(class="form-control", rows=3) }}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional Notes -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="notesHeader">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#notesCollapse"
+            >
+              <span class="material-icons me-2">note_add</span>
+              6. Additional Notes / Ytterligare Noteringar
+            </button>
+          </h2>
+          <div
+            id="notesCollapse"
+            class="accordion-collapse collapse"
+            data-bs-parent="#quoteForm"
+          >
+            <div class="accordion-body">
+              <div class="mb-3">
+                {{ form.additional_notes.notes.label(class="form-label") }}
+                {{ form.additional_notes.notes(class="form-control", rows=4) }}
+              </div>
+
+              <!-- Output Format -->
+              <div class="mb-3">
+                {{ form.additional_notes.output_format.label(class="form-label") }}
+                {{ form.additional_notes.output_format(class="form-select") }}
+              </div>
+
+              <!-- Extra Items -->
+              <h5>Extra Items / Extra Artiklar</h5>
+              <div id="extra-items-container">
+                {% for item_form in form.additional_notes.extra_items %}
+                <div class="row extra-item-row mb-2">
+                  <div class="col-md-5">
+                    {{ item_form.item.label(class="form-label") }}
+                    {{ item_form.item(class="form-control") }}
+                  </div>
+                  <div class="col-md-4">
+                    {{ item_form.cost.label(class="form-label") }}
+                    {{ item_form.cost(class="form-control", type="number", step="0.01") }}
+                  </div>
+                  <div class="col-md-2">
+                    <label class="form-label">Output Format</label>
+                    <select class="form-select output-format">
+                      <option value="quotation">Quotation</option>
+                      <option value="workorder">Work Order</option>
+                      <option value="option">Option</option>
+                    </select>
+                  </div>
+                  <div class="col-md-1 d-flex align-items-end">
+                    <button
+                      type="button"
+                      class="btn btn-danger remove-extra-item mb-2"
+                    >
+                      <span class="material-icons">remove</span>
+                    </button>
+                  </div>
+                </div>
+                {% endfor %}
+              </div>
+              <button
+                type="button"
+                id="add-extra-item"
+                class="btn btn-primary mt-2"
+              >
+                <span class="material-icons">add</span> Add Extra Item
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Price Breakdown Section -->
+      <div class="card mt-4 shadow-sm">
+        <div class="card-header bg-primary text-white">
+          <h3 class="card-title mb-0">
+            <span class="material-icons align-middle me-2">calculate</span>
+            Price Breakdown / Prisberäkning
+          </h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <!-- Fast Pris - Main Option -->
+            <div class="col-md-6">
+              <h4>Fast Pris</h4>
+              <table class="table table-bordered">
+                <tbody>
+                  <tr>
+                    <td>Arbetskostnad efter ROT-avdrag</td>
+                    <td class="text-end bg-warning" id="laborCostAfterRot">
+                      0 kr
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Materialkostnad</td>
+                    <td class="text-end bg-warning" id="materialCost">0 kr</td>
+                  </tr>
+                  <tr>
+                    <td>Avfallshantering och servicebil</td>
+                    <td class="text-end bg-warning" id="wasteCost">0 kr</td>
+                  </tr>
+                  <tr>
+                    <td>Rabatt</td>
+                    <td class="text-end bg-warning" id="discount">0 kr</td>
+                  </tr>
+                  <tr class="table-light">
+                    <td><strong>Summa som betalas av er</strong></td>
+                    <td class="text-end" id="totalCost">
+                      <strong>0 kr</strong>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <small>Vi ansöker om ROT-avdrag för er räkning</small>
+                    </td>
+                    <td class="text-end" id="rotDeduction">
+                      <small>0 kr</small>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Options for Alternative Configurations -->
+            <div class="col-md-6">
+              <h4>Alternativa Konfigurationer</h4>
+
+              <!-- Option 1 -->
+              <h5 class="mt-3">Option 1: Totalrenovering i enklare form</h5>
+              <table class="table table-bordered">
+                <tbody>
+                  <tr>
+                    <td>Arbetskostnad efter ROT-avdrag</td>
+                    <td class="text-end" id="laborCostAfterRotOption1">0 kr</td>
+                  </tr>
+                  <tr>
+                    <td>Materialkostnad</td>
+                    <td class="text-end" id="materialCostOption1">0 kr</td>
+                  </tr>
+                  <tr>
+                    <td>Avfallshantering och servicebil</td>
+                    <td class="text-end" id="wasteCostOption1">0 kr</td>
+                  </tr>
+                  <tr>
+                    <td>Rabatt</td>
+                    <td class="text-end" id="discountOption1">0 kr</td>
+                  </tr>
+                  <tr class="table-light">
+                    <td><strong>Summa Option 1</strong></td>
+                    <td class="text-end" id="totalCostOption1">
+                      <strong>0 kr</strong>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <!-- Option 2 -->
+              <h5 class="mt-4">Option 2: Vattenburen golvvärme</h5>
+              <table class="table table-bordered">
+                <tbody>
+                  <tr>
+                    <td>Arbetskostnad efter ROT-avdrag</td>
+                    <td class="text-end" id="laborCostAfterRotOption2">0 kr</td>
+                  </tr>
+                  <tr>
+                    <td>Materialkostnad</td>
+                    <td class="text-end" id="materialCostOption2">0 kr</td>
+                  </tr>
+                  <tr>
+                    <td>Avfallshantering och servicebil</td>
+                    <td class="text-end" id="wasteCostOption2">0 kr</td>
+                  </tr>
+                  <tr>
+                    <td>Rabatt</td>
+                    <td class="text-end" id="discountOption2">0 kr</td>
+                  </tr>
+                  <tr class="table-light">
+                    <td><strong>Summa Option 2</strong></td>
+                    <td class="text-end" id="totalCostOption2">
+                      <strong>0 kr</strong>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Make sure calculations run on page load -->
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          // Manually trigger price update on page load
+          if (typeof updatePricePreview === 'function') {
+            console.log('Initializing price calculations...')
+            updatePricePreview()
+          } else {
+            console.error(
+              'Price calculation function not found! Check if main.js is loaded correctly.'
+            )
+          }
+        })
+      </script>
+
+      <div class="d-grid gap-2 mt-4">
+        <button type="submit" class="btn btn-primary btn-lg">
+          <span class="material-icons align-middle me-2">send</span>
+          Submit Quote Request / Skicka offertförfrågan
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %} {% block extra_js %}
+<script>
+  // Show/hide sketch upload based on checkbox
+  document.addEventListener('DOMContentLoaded', function () {
+    const hasSketchCheckbox = document.querySelector(
+      '#bathroom_details-has_sketch'
+    )
+    const sketchUpload = document.querySelector('#sketchUpload')
+
+    function toggleSketchUpload() {
+      sketchUpload.style.display = hasSketchCheckbox.checked ? 'block' : 'none'
+    }
+
+    hasSketchCheckbox.addEventListener('change', toggleSketchUpload)
+    toggleSketchUpload() // Initial state
+  })
+
+  // Form validation
+  ;(function () {
+    'use strict'
+    var forms = document.querySelectorAll('.needs-validation')
+    Array.prototype.slice.call(forms).forEach(function (form) {
+      form.addEventListener(
+        'submit',
+        function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+          form.classList.add('was-validated')
+        },
+        false
+      )
+    })
+  })()
+
+  // Extra Items Management
+  document.addEventListener('DOMContentLoaded', function () {
+    const container = document.getElementById('extra-items-container')
+    const addButton = document.getElementById('add-extra-item')
+    let itemCount = container.getElementsByClassName('extra-item-row').length
+
+    // Add new item
+    addButton.addEventListener('click', function () {
+      const newRow = document.createElement('div')
+      newRow.className = 'extra-item-row mb-3'
+      newRow.innerHTML = `
+        <div class="row">
+          <div class="col-md-5">
+            <label class="form-label">Artikel / Item</label>
+            <input type="text" name="additional_notes-extra_items-${itemCount}-item" class="form-control" required>
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Kostnad / Cost (SEK)</label>
+            <input type="number" name="additional_notes-extra_items-${itemCount}-cost" class="form-control" required min="0" step="0.01">
+          </div>
+          <div class="col-md-2">
+            <label class="form-label">Output Format</label>
+            <select class="form-select output-format">
+              <option value="quotation">Quotation</option>
+              <option value="workorder">Work Order</option>
+              <option value="option">Option</option>
+            </select>
+          </div>
+          <div class="col-md-1 d-flex align-items-end">
+            <button type="button" class="btn btn-danger remove-extra-item mb-2">
+              <span class="material-icons">remove</span>
+            </button>
+          </div>
+        </div>
+      `
+      container.appendChild(newRow)
+      itemCount++
+    })
+
+    // Remove item
+    container.addEventListener('click', function (e) {
+      if (e.target.closest('.remove-extra-item')) {
+        const row = e.target.closest('.extra-item-row')
+        if (container.getElementsByClassName('extra-item-row').length > 1) {
+          row.remove()
+          // Update indices for remaining rows
+          const rows = container.getElementsByClassName('extra-item-row')
+          Array.from(rows).forEach((row, index) => {
+            const inputs = row.querySelectorAll('input')
+            inputs.forEach(input => {
+              const name = input.name
+              input.name = name.replace(/\d+/, index)
+            })
+          })
+          itemCount--
+        } else {
+          alert('At least one extra item must remain.')
+        }
+      }
+    })
+  })
+
+  // Add class to price-affecting inputs
+  document.querySelectorAll('input, select').forEach(input => {
+    if (input.type !== 'file' && input.type !== 'hidden') {
+      input.classList.add('price-affecting')
+    }
+  })
+
+  // Handle additional sketch files
+  document.addEventListener('DOMContentLoaded', function () {
+    const addSketchBtn = document.getElementById('add-sketch')
+    if (addSketchBtn) {
+      const sketchContainer = document.getElementById(
+        'additional-sketches-container'
+      )
+      let sketchCount = sketchContainer.querySelectorAll(
+        '.additional-sketch-row'
+      ).length
+
+      addSketchBtn.addEventListener('click', function () {
+        const newRow = document.createElement('div')
+        newRow.className = 'mb-2 additional-sketch-row'
+        newRow.innerHTML = `
+          <div class="input-group">
+            <input class="form-control" id="bathroom_details-sketch_files-${sketchCount}" name="bathroom_details-sketch_files-${sketchCount}" type="file">
+            <button type="button" class="btn btn-outline-danger remove-sketch">
+              <span class="material-icons">remove</span>
+            </button>
+          </div>
+        `
+        sketchContainer.appendChild(newRow)
+        sketchCount++
+
+        // Add event listener to the new remove button
+        const removeBtn = newRow.querySelector('.remove-sketch')
+        removeBtn.addEventListener('click', function () {
+          newRow.remove()
+          // Update indices for remaining rows
+          updateSketchIndices()
+        })
+      })
+
+      // Add event listeners to existing remove buttons
+      document.querySelectorAll('.remove-sketch').forEach(btn => {
+        btn.addEventListener('click', function () {
+          btn.closest('.additional-sketch-row').remove()
+          updateSketchIndices()
+        })
+      })
+
+      // Function to update indices
+      function updateSketchIndices() {
+        const rows = sketchContainer.querySelectorAll('.additional-sketch-row')
+        rows.forEach((row, index) => {
+          const input = row.querySelector('input')
+          if (input) {
+            input.id = `bathroom_details-sketch_files-${index}`
+            input.name = `bathroom_details-sketch_files-${index}`
+          }
+        })
+        sketchCount = rows.length
+      }
+    }
+
+    // Show/hide sketch upload based on checkbox
+    const hasSketchCheckbox = document.querySelector(
+      '#bathroom_details-has_sketch'
+    )
+    const sketchUploadDiv = document.getElementById('sketchUpload')
+
+    if (hasSketchCheckbox && sketchUploadDiv) {
+      // Initial state
+      sketchUploadDiv.style.display = hasSketchCheckbox.checked
+        ? 'block'
+        : 'none'
+
+      // Toggle on change
+      hasSketchCheckbox.addEventListener('change', function () {
+        sketchUploadDiv.style.display = this.checked ? 'block' : 'none'
+      })
+    }
+  })
+</script>
+{% endblock %}
