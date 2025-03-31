@@ -28,4 +28,7 @@ build/
 
 # OS generated files
 .DS_Store
-Thumbs.db 
+Thumbs.db
+
+# Large files
+Bathroom Rennovation Quote.zip 
