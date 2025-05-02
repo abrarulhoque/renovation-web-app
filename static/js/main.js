@@ -171,6 +171,11 @@ document.addEventListener('DOMContentLoaded', function () {
       laborCost += 2000
     }
 
+    // Cost for bringing in materials
+    if (document.querySelector('#appliances-bring_in_materials')?.checked) {
+      laborCost += 500 // Example cost, should match backend
+    }
+
     return laborCost
   }
 
@@ -179,15 +184,15 @@ document.addEventListener('DOMContentLoaded', function () {
     let otherCosts = 0
 
     // Parking Availability
-    const parkingDistance = document.querySelector(
+    const parkingDistanceValue = document.querySelector(
       '#personal_details-parking_distance'
     )?.value
-    if (
-      parkingDistance?.toLowerCase().includes('dålig') ||
-      parkingDistance?.toLowerCase().includes('bad')
-    ) {
+    if (parkingDistanceValue === 'bad') {
       laborCost += 1000
+    } else if (parkingDistanceValue === 'ok') {
+      laborCost += 500 // Example cost for 'ok'
     }
+    // No cost for 'good'
 
     // Transport Possibility
     const transport = document.querySelector(
@@ -539,12 +544,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Junction Box Distance
-    const junctionBoxDistance =
+    const junctionBoxDistanceValue =
       document.querySelector('#appliances-junction_box_distance')?.value || ''
-    if (
-      junctionBoxDistance === 'another_floor' ||
-      junctionBoxDistance === 'up_to_10m'
-    ) {
+    if (junctionBoxDistanceValue === 'far') {
       laborCost += 1000
       materialCost += 500
     }
@@ -593,9 +595,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const spotlightsCount =
       parseInt(document.querySelector('#appliances-spotlights_count')?.value) ||
       0
+    const spotlightsPrice =
+      parseFloat(
+        document.querySelector('#appliances-spotlights_price_per_unit')?.value
+      ) || 500 // Default price if not set
     if (spotlightsCount > 0) {
-      laborCost += spotlightsCount * 500
-      materialCost += spotlightsCount * 300
+      laborCost += spotlightsCount * spotlightsPrice
+      materialCost += spotlightsCount * 300 // Keep material cost separate unless specified otherwise
     }
 
     return { laborCost, materialCost }

@@ -49,8 +49,14 @@ class PersonalDetailsForm(FlaskForm):
     )
 
     # Parking and transportation
-    parking_distance = StringField(
-        "Parkeringsmöjlighet(avstånd till fastighet) / Parking Distance",
+    parking_distance = SelectField(
+        "Parkeringsmöjlighet (avstånd till fastighet) / Parking Availability",
+        choices=[
+            ("", "Välj... / Select..."),  # Optional: Add a placeholder
+            ("bad", "Dålig / Bad"),
+            ("ok", "Helt okej / Okay"),
+            ("good", "Bra / Good"),
+        ],
         validators=[Optional()],
     )
     transport_possibility = SelectField(
@@ -219,14 +225,20 @@ class AppliancesForm(FlaskForm):
     spotlights_count = IntegerField(
         "Spotlights (antal) / Spotlights (quantity)", validators=[Optional()]
     )
+    spotlights_price_per_unit = DecimalField(
+        "Pris per spotlight / Price per Spotlight", validators=[Optional()]
+    )
     ceiling_lowering = BooleanField("Taksänkning / Ceiling Lowering")
 
     # Additional fields from rows 28-49
-    good_stairwell = BooleanField(
-        "Trapphus med god tillgänglighet / Staircase with good accessibility"
-    )
+    # good_stairwell = BooleanField( # Removed duplicate
+    #     "Trapphus med god tillgänglighet / Staircase with good accessibility"
+    # )
     etablering = BooleanField("Etablering / Establishment")
     flytspackling = BooleanField("Flytspackling / Floor leveling compound")
+    bring_in_materials = BooleanField(
+        "Ta in byggmaterial / Bring in Building Materials"
+    )
     workspace_distance_if_no = DecimalField(
         "Distans till närmaste arbetsutrymme om nej / Distance to the nearest workspace if no",
         validators=[Optional()],
@@ -319,11 +331,11 @@ class AppliancesForm(FlaskForm):
         validators=[Optional()],
     )
     junction_box_distance = SelectField(
-        "Avstånd från kopplingsdosa till badrum / Distance from junction box to bathroom",
+        "Avståndet mellan närmaste kopplingsdosa till badrummet / Distance from Nearest Junction Box to Bathroom",
         choices=[
-            ("up_to_5m", "Upp till fem meter / Up to five meters"),
-            ("up_to_10m", "Upp till tio meter / Up to ten meters"),
-            ("another_floor", "Annan våning / Another floor"),
+            ("", "Välj... / Select..."),  # Optional: Add a placeholder
+            ("close", "I närliggande vägg / In Nearby Wall"),
+            ("far", "Långt bort / Far Away"),
         ],
         validators=[Optional()],
     )
@@ -358,11 +370,11 @@ class InteriorFittingsForm(FlaskForm):
     )
 
     # Bathtub options - converted to individual toggle buttons
-    bathtub_normal = BooleanField("Badkar normal / Bathtub normal")
-    bathtub_long = BooleanField("Badkar avlång / Bathtub long")
+    # bathtub_normal = BooleanField("Badkar normal / Bathtub normal") # Removed
+    # bathtub_long = BooleanField("Badkar avlång / Bathtub long") # Removed
     bathtub_freestanding = BooleanField("Badkar fristående / Bathtub freestanding")
     bathtub_built_in = BooleanField("Badkar inbyggt / Bathtub built-in")
-    bathtub_wall = BooleanField("Badkar vägg / Bathtub wall-mounted")
+    # bathtub_wall = BooleanField("Badkar vägg / Bathtub wall-mounted") # Removed
 
     # Toilet options - converted to individual toggle buttons
     toilet_freestanding = BooleanField("Toalett fristående / Toilet freestanding")

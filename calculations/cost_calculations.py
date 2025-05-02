@@ -78,15 +78,19 @@ def calculate_labor_cost(form):
     ]:
         general_costs += 2000
 
+    # Cost for bringing in materials
+    if hasattr(form, "appliances") and form.appliances.bring_in_materials.data:
+        general_costs += 500  # Example cost
+
     # Accessibility costs
     accessibility_labor = 0
 
     # Parking and transport
-    if (
-        form.personal_details.parking_distance.data
-        and "dålig" in form.personal_details.parking_distance.data.lower()
-    ):
+    if form.personal_details.parking_distance.data == "bad":
         accessibility_labor += 1000
+    elif form.personal_details.parking_distance.data == "ok":
+        accessibility_labor += 500  # Example cost for 'ok'
+    # No cost for 'good'
 
     # Fix transport_possibility - 0 for 'good' instead of 500
     if form.personal_details.transport_possibility.data == "poor":
@@ -407,9 +411,8 @@ def calculate_electrical_labor_cost(form):
     elif fusebox_distance == "another_floor":
         labor_cost += 2000
 
-    # Junction Box Distance - Fix field name inconsistency
-    junction_box_distance = form.appliances.junction_box_distance.data or ""
-    if junction_box_distance == "another_floor" or junction_box_distance == "up_to_10m":
+    # Junction Box Distance
+    if form.appliances.junction_box_distance.data == "far":
         labor_cost += 1000
 
     # Electric Towel Warmer
@@ -438,8 +441,11 @@ def calculate_electrical_labor_cost(form):
 
     # Spotlights
     spotlights_count = int(form.appliances.spotlights_count.data or 0)
+    spotlights_price = float(
+        form.appliances.spotlights_price_per_unit.data or 500
+    )  # Use 500 as default if no price given
     if spotlights_count > 0:
-        labor_cost += spotlights_count * 500
+        labor_cost += spotlights_count * spotlights_price
 
     return labor_cost
 
@@ -681,8 +687,7 @@ def calculate_electrical_material_cost(form):
         material_cost += 1000
 
     # Junction Box Distance
-    junction_box_distance = form.appliances.junction_box_distance.data or ""
-    if junction_box_distance == "another_floor" or junction_box_distance == "up_to_10m":
+    if form.appliances.junction_box_distance.data == "far":
         material_cost += 500
 
     # Electric Towel Warmer

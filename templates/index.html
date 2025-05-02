@@ -127,7 +127,7 @@ endblock %} {% block content %}
               <div class="row">
                 <div class="col-md-6 mb-3">
                   {{ form.personal_details.parking_distance.label(class="form-label") }}
-                  {{ form.personal_details.parking_distance(class="form-control") }}
+                  {{ form.personal_details.parking_distance(class="form-select price-affecting") }}
                 </div>
                 <div class="col-md-6 mb-3">
                   {{ form.personal_details.transport_possibility.label(class="form-label") }}
@@ -334,7 +334,11 @@ endblock %} {% block content %}
                   </div>
                   <div class="mb-3">
                     {{ form.appliances.spotlights_count.label(class="form-label") }}
-                    {{ form.appliances.spotlights_count(class="form-control", type="number", min=0) }}
+                    {{ form.appliances.spotlights_count(class="form-control price-affecting", type="number", min=0) }}
+                  </div>
+                  <div class="mb-3">
+                    {{ form.appliances.spotlights_price_per_unit.label(class="form-label") }}
+                    {{ form.appliances.spotlights_price_per_unit(class="form-control price-affecting", type="number", step="0.01") }}
                   </div>
                 </div>
               </div>
@@ -345,10 +349,7 @@ endblock %} {% block content %}
               </h5>
               <div class="row">
                 <div class="col-md-6">
-                  <div class="form-check form-switch mb-3">
-                    {{ form.appliances.good_stairwell(class="form-check-input") }}
-                    {{ form.appliances.good_stairwell.label(class="form-check-label") }}
-                  </div>
+                  <!-- Removed good_stairwell -->
                   <div class="form-check form-switch mb-3">
                     {{ form.appliances.etablering(class="form-check-input") }}
                     {{ form.appliances.etablering.label(class="form-check-label") }}
@@ -356,6 +357,10 @@ endblock %} {% block content %}
                   <div class="form-check form-switch mb-3">
                     {{ form.appliances.flytspackling(class="form-check-input") }}
                     {{ form.appliances.flytspackling.label(class="form-check-label") }}
+                  </div>
+                  <div class="form-check form-switch mb-3">
+                    {{ form.appliances.bring_in_materials(class="form-check-input price-affecting") }}
+                    {{ form.appliances.bring_in_materials.label(class="form-check-label") }}
                   </div>
                   <div class="mb-3">
                     {{ form.appliances.workspace_distance_if_no.label(class="form-label") }}
@@ -441,7 +446,7 @@ endblock %} {% block content %}
                   </div>
                   <div class="mb-3">
                     {{ form.appliances.junction_box_distance.label(class="form-label") }}
-                    {{ form.appliances.junction_box_distance(class="form-select") }}
+                    {{ form.appliances.junction_box_distance(class="form-select price-affecting") }}
                   </div>
                 </div>
               </div>
@@ -531,14 +536,8 @@ endblock %} {% block content %}
               <div class="row mb-4">
                 <div class="col-md-6">
                   <h6>Badkar / Bathtub</h6>
-                  <div class="form-check form-switch mb-2">
-                    {{ form.interior_fittings.bathtub_normal(class="form-check-input") }}
-                    {{ form.interior_fittings.bathtub_normal.label(class="form-check-label") }}
-                  </div>
-                  <div class="form-check form-switch mb-2">
-                    {{ form.interior_fittings.bathtub_long(class="form-check-input") }}
-                    {{ form.interior_fittings.bathtub_long.label(class="form-check-label") }}
-                  </div>
+                  <!-- Removed bathtub_normal -->
+                  <!-- Removed bathtub_long -->
                   <div class="form-check form-switch mb-2">
                     {{ form.interior_fittings.bathtub_freestanding(class="form-check-input") }}
                     {{ form.interior_fittings.bathtub_freestanding.label(class="form-check-label") }}
@@ -547,10 +546,7 @@ endblock %} {% block content %}
                     {{ form.interior_fittings.bathtub_built_in(class="form-check-input") }}
                     {{ form.interior_fittings.bathtub_built_in.label(class="form-check-label") }}
                   </div>
-                  <div class="form-check form-switch mb-2">
-                    {{ form.interior_fittings.bathtub_wall(class="form-check-input") }}
-                    {{ form.interior_fittings.bathtub_wall.label(class="form-check-label") }}
-                  </div>
+                  <!-- Removed bathtub_wall -->
                 </div>
                 <div class="col-md-6">
                   <h6>Toalett / Toilet</h6>
